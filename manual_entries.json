@@ -1,0 +1,6 @@
+{
+  "source": "My Bibliography (not indexed in PubMed)",
+  "note": "PLACEHOLDER. Regenerate with: python3 scripts/import_bibliography.py medline.txt",
+  "count": 0,
+  "records": []
+}

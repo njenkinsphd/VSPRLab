@@ -1,0 +1,223 @@
+{
+  "_comment": "Edit this file, then run: python3 scripts/build_people.py",
+  "_source": "Current roster confirmed by Nate 2026-09-29. Alumni roles/destinations partly from the Iowa lab page, partly from Nate.",
+  "_fields": "name, credentials, role, now (alumni only: where they are today), photo (path under Media/ or null), email, scholar, orcid, bio",
+  "groups": [
+    {
+      "id": "pi",
+      "title": "Principal Investigator",
+      "blurb": null,
+      "feature": true,
+      "people": [
+        {
+          "name": "Nathaniel D. M. Jenkins",
+          "credentials": "PhD, FAHA",
+          "role": "Associate Professor of Kinesiology",
+          "photo": "Media/Headshot-web.jpg",
+          "email": "VSPRLab@wisc.edu",
+          "scholar": null,
+          "orcid": "0000-0003-1781-3414",
+          "bio": "[PLACEHOLDER] A short paragraph in your own voice. What you work on, how you got here, what you are looking for in trainees."
+        }
+      ]
+    },
+    {
+      "id": "current",
+      "title": "Lab members",
+      "blurb": null,
+      "feature": false,
+      "people": [
+        {
+          "name": "Gavin Power",
+          "credentials": "PhD",
+          "role": "Postdoctoral Fellow",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Manoela Lima Oliveira",
+          "credentials": "PhD",
+          "role": "Postdoctoral Fellow",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Laura Schwager",
+          "credentials": "BA",
+          "role": "Research Associate",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Mark Flores",
+          "credentials": "",
+          "role": "PhD Candidate",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Kylee West",
+          "credentials": "",
+          "role": "PhD Candidate",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Sequoia Ernst",
+          "credentials": "",
+          "role": "MS Student",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        }
+      ]
+    },
+    {
+      "id": "alumni",
+      "title": "Alumni",
+      "blurb": "Where they are now.",
+      "feature": false,
+      "compact": true,
+      "people": [
+        {
+          "name": "Nile Banks",
+          "credentials": "PhD",
+          "role": "PhD 2023, then postdoc with Bill Schrage at UW–Madison",
+          "now": "Assistant Professor, Maynooth University, Ireland",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Emily Rogers",
+          "credentials": "PhD",
+          "role": "PhD 2023, then postdoc with Bill Schrage at UW–Madison",
+          "now": "Clinical Affairs Lead, Neuromod, Dublin",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Nathaniel Helwig",
+          "credentials": "MS",
+          "role": "MS 2023",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Anna Zucker",
+          "credentials": "MS",
+          "role": "MS Student",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Alexander Berry",
+          "credentials": "BS",
+          "role": "Research Assistant",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Thomas Hart, Jr",
+          "credentials": "",
+          "role": "Undergraduate Research Assistant",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Preston Engstrom",
+          "credentials": "",
+          "role": "Undergraduate Research Assistant",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Isabel Jenness",
+          "credentials": "",
+          "role": "Undergraduate Research Assistant",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Jacob Venenga",
+          "credentials": "",
+          "role": "Undergraduate Research Assistant",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Justin Alpers",
+          "credentials": "",
+          "role": "Undergraduate Research Assistant",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        },
+        {
+          "name": "Sydni Schulte",
+          "credentials": "",
+          "role": "Undergraduate Research Assistant",
+          "now": "[PLACEHOLDER] Where now?",
+          "photo": null,
+          "email": null,
+          "scholar": null,
+          "orcid": null,
+          "bio": null
+        }
+      ]
+    }
+  ]
+}

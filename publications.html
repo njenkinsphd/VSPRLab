@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications · VSPR Lab</title>
+<meta name="description" content="Publications from the Vascular Stress Physiology and Resilience Laboratory at the University of Wisconsin-Madison.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F8F8; --paper-deep:#EFEFF0; --ink:#1D1C1F; --slate:#6B6A70;
+  --crimson:#B50811; --crimson-deep:#7A0309; --gold:#BF9B54;
+  --blue:#2A5D8F;
+  --display:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --gutter:clamp(20px,5vw,84px);
+  --rule:1px solid rgba(29,28,31,.13);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+
+.masthead{border-bottom:var(--rule);padding:14px var(--gutter);display:flex;
+  align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.masthead-inst{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin:0}
+.masthead-inst strong{color:var(--ink);font-weight:700}
+.sitenav{display:flex;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase}
+.sitenav a{color:var(--slate);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent}
+.sitenav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.sitenav a[aria-current="page"]{color:var(--crimson);border-bottom-color:var(--crimson)}
+.hairline{height:2px;background:var(--gold);opacity:.85}
+
+.pubhead{max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,76px) var(--gutter) clamp(20px,3vw,32px)}
+.pubhead h1{font-family:var(--display);font-weight:800;letter-spacing:-.035em;
+  font-size:clamp(2.4rem,6.5vw,4.6rem);line-height:1;margin:0 0 1rem}
+.pubhead p{color:var(--slate);max-width:60ch;margin:0}
+.meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--slate);
+  margin-top:1.4rem;line-height:1.9}
+.key{display:flex;gap:20px;flex-wrap:wrap;margin:1.5rem 0 0;padding:0;list-style:none;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase}
+.key li{display:flex;align-items:center;gap:7px;color:var(--slate)}
+.key i{width:9px;height:9px;border-radius:50%;display:block;flex:0 0 auto}
+.key .k-pi{background:var(--crimson)}
+.key .k-tr{background:var(--blue)}
+
+.jump{max-width:1440px;margin:0 auto;padding:0 var(--gutter) clamp(26px,4vw,44px);
+  display:flex;flex-wrap:wrap;gap:10px}
+.jump a{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border:1px solid rgba(29,28,31,.18);
+  border-radius:2px;padding:7px 11px}
+.jump a:hover{border-color:var(--crimson);color:var(--crimson)}
+.jump a span{color:var(--gold);margin-left:.45em;font-weight:700}
+
+.group{max-width:1440px;margin:0 auto;padding:0 var(--gutter) clamp(30px,5vw,58px)}
+.group-head{border-top:2px solid var(--ink);padding-top:14px;margin-bottom:clamp(18px,3vw,30px);
+  display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:baseline}
+.group-title{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.4vw,1.7rem);
+  letter-spacing:-.02em;margin:0}
+.group-blurb{grid-column:1;font-size:.94rem;color:var(--slate);margin:0;max-width:56ch}
+.group-count{grid-row:1;grid-column:2;font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.1em;color:var(--crimson);margin:0}
+
+.year{display:grid;grid-template-columns:minmax(0,1fr);gap:4px 26px;
+  border-top:var(--rule);padding:clamp(14px,2vw,20px) 0}
+.year-label{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;
+  color:var(--slate);margin:0}
+.pub-list{list-style:none;margin:0;padding:0}
+.pub{padding:0 0 clamp(14px,2vw,20px);max-width:76ch}
+.pub:last-child{padding-bottom:0}
+.pub-authors{font-size:.9rem;color:var(--slate);margin:0 0 .18rem;line-height:1.5}
+.pub-authors .pi{color:var(--crimson);font-weight:600}
+.pub-authors .member{color:var(--blue);font-weight:600}
+.pub-title{font-family:var(--body);font-weight:600;font-size:1.06rem;line-height:1.38;
+  margin:0 0 .28rem}
+.pub-cite{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--slate);margin:0}
+.pub-cite .jrnl{color:var(--ink)}
+.pub-links{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  margin:.4rem 0 0;display:flex;gap:12px;flex-wrap:wrap}
+.pub-links a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.pub-links a:hover{border-bottom-color:var(--crimson)}
+
+@media (min-width:860px){
+  .year{grid-template-columns:76px minmax(0,1fr)}
+  .year-label{padding-top:.28rem}
+}
+
+.foot{border-top:var(--rule);padding:clamp(30px,4vw,48px) var(--gutter);max-width:1440px;
+  margin:0 auto;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;align-items:flex-end}
+.foot-name{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.01em;margin:0 0 .3rem}
+.foot-meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--slate);margin:0;line-height:1.9}
+.foot-meta a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.foot-mark{width:118px;opacity:.5}
+:where(a,button):focus-visible{outline:2px solid var(--crimson);outline-offset:3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <p class="masthead-inst"><strong>University of Wisconsin&ndash;Madison</strong> &middot; Department of Kinesiology</p>
+  <nav class="sitenav">
+    <a href="index.html">Home</a>
+    <a href="people.html">People</a>
+    <a href="publications.html" aria-current="page">Publications</a>
+  </nav>
+</header>
+<div class="hairline" role="presentation"></div>
+
+<main>
+  <div class="pubhead">
+    <h1>Publications</h1>
+    <p>108 indexed records from the lab and from Nathaniel D. M. Jenkins, grouped by type and listed newest first.</p>
+    <p class="meta">
+      Source PubMed, query <code>Jenkins NDM[Author]</code><br>
+      Last updated 2026-09-25
+    </p>
+    <ul class="key">
+      <li><i class="k-pi"></i> Principal investigator</li>
+      <li><i class="k-tr"></i> VSPR Lab trainee or staff</li>
+    </ul>
+  </div>
+
+  <nav class="jump" aria-label="Jump to section">
+      <a href="#article">Peer-reviewed articles <span>96</span></a>
+      <a href="#review">Reviews and guidelines <span>5</span></a>
+      <a href="#commentary">Editorials and commentary <span>6</span></a>
+      <a href="#preprint">Preprints <span>1</span></a>
+  </nav>
+
+  <section class="group" id="article">
+    <div class="group-head">
+      <h2 class="group-title">Peer-reviewed articles</h2>
+      <p class="group-blurb">Original research reports.</p>
+      <p class="group-count">96</p>
+    </div>
+<div class="year">
+      <p class="year-label">2026</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Burrows BT, Sloane R, Ashner MC, Pieper CF, Lewis CE, Gabriel KP, Schreiner PJ, Hornikel B, Zhang K, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Sullivan A, Bowling CB</p>
+        <h3 class="pub-title">Associations of depressive symptoms and antidepressant medication use with physical function among middle-aged adults: Results from the CARDIA Function study</h3>
+        <p class="pub-cite"><span class="jrnl">J Affect Disord</span> &middot; 2026 &middot; 401:121324</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.jad.2026.121324" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/41638502/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12910512/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Baker P, Ladan A, Joniak K, Moore S, Britton M, Cantu E, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Smith-Ryan A</p>
+        <h3 class="pub-title">Menstrual cycle influences skeletal muscle oxygenation during high-intensity interval training: a work to rest evaluation</h3>
+        <p class="pub-cite"><span class="jrnl">Appl Physiol Nutr Metab</span> &middot; 2026 &middot; 51:1-14</p>
+        <p class="pub-links"><a href="https://doi.org/10.1139/apnm-2025-0397" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/41747234/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2025</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Lima Oliveira M</span>, Cares K, Hamm A, Nadeem S, Bogseth D, Klatkiewicz B, Overhiser T, Elias C, Li Y, Guo R, Oddo VM, Biggers A, Naylor KB, Chen Z, Pezley L, Attre M, Peñalver Bernabé B, Gabel K, Sharp LK, Bendinskas K, Webber D, Lockwood MB, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Tussing-Humphreys LM</p>
+        <h3 class="pub-title">A Remote Time-Restricted Eating and Mindfulness Intervention Addressing Risk Factors Associated with Early-Onset Colorectal Cancer Demonstrates Feasibility and Acceptability among Young Adults: A Randomized Controlled Pilot Trial</h3>
+        <p class="pub-cite"><span class="jrnl">Nutr Cancer</span> &middot; 2025 &middot; 77(10):1142-1161</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/01635581.2025.2557642" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/40924443/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12604677/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Robinson AT, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Exercise as Vascular Medicine: Can Exercise Combat Negative Health Behaviors From Causing Endothelial Dysfunction?</h3>
+        <p class="pub-cite"><span class="jrnl">Exerc Sport Mov</span> &middot; 2025 &middot; 3(4)</p>
+        <p class="pub-links"><a href="https://doi.org/10.1249/esm.0000000000000054" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/41059078/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12499815/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Gallagher J, Bayman EO, Cadmus-Bertram LA, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Pearlman A, Whitaker KM, Carr LJ</p>
+        <h3 class="pub-title">Formative Study to Inform a Physical Activity Intervention Targeted to Rural Men in the United States</h3>
+        <p class="pub-cite"><span class="jrnl">Health Sci Rep</span> &middot; 2025 &middot; 8(2):e70485</p>
+        <p class="pub-links"><a href="https://doi.org/10.1002/hsr2.70485" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39980827/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11840238/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Boyes NG, Jacob DW, Shariffi B, Martin SA, Limberg JK</p>
+        <h3 class="pub-title">Habitual sleep duration is associated with heightened muscle sympathetic nerve activation and blood pressure reactivity in response to the cold pressor test</h3>
+        <p class="pub-cite"><span class="jrnl">J Appl Physiol (1985)</span> &middot; 2025 &middot; 139(5):1293-1299</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/japplphysiol.00808.2025" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/41087056/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12723999/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Carlson AS, <span class="member" title="VSPR Lab trainee or staff">Schwager LE</span>, <span class="member" title="VSPR Lab trainee or staff">Hart TW</span>, Diesel SJ, Harris JL, <span class="member" title="VSPR Lab trainee or staff">Flores M</span>, <span class="member" title="VSPR Lab trainee or staff">West KS</span>, Thomas EBK, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Interactions of chronic stress exposure and stress appraisal on vascular endothelial function among young adults</h3>
+        <p class="pub-cite"><span class="jrnl">J Appl Physiol (1985)</span> &middot; 2025 &middot; 138(3):783-791</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/japplphysiol.00457.2024" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39813018/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12208104/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, Stanhewicz AE, Whitaker KM, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">The acute impact of resistance exercise training on cardiovascular parameters in trained and untrained adults with high blood pressure</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2025 &middot; 125(8):2209-2224</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-025-05754-w" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/40088269/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2024</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Trachta ER, Barone Gibbs B, Carr LJ, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Acceptability of Performing Resistance Exercise Breaks in the Workplace to Break Up Prolonged Sedentary Time: A Randomized Control Trial in U.S. Office Workers and Students</h3>
+        <p class="pub-cite"><span class="jrnl">Workplace Health Saf</span> &middot; 2024 &middot; 72(6):234-243</p>
+        <p class="pub-links"><a href="https://doi.org/10.1177/21650799231215814" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/38314504/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Helwig NJ</span>, <span class="member" title="VSPR Lab trainee or staff">Schwager LE</span>, Alpers JP, Schulte SL, Trachta ER, Lockwood CM, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Acute effects of commercial energy drink consumption on exercise performance and cardiovascular safety: a randomized, double-blind, placebo-controlled, crossover trial</h3>
+        <p class="pub-cite"><span class="jrnl">J Int Soc Sports Nutr</span> &middot; 2024 &middot; 21(1):2297988</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/15502783.2023.2297988" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/38197606/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10783828/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Helwig NJ</span>, <span class="member" title="VSPR Lab trainee or staff">Schwager LE</span>, Berry AC, <span class="member" title="VSPR Lab trainee or staff">Zucker AC</span>, <span class="member" title="VSPR Lab trainee or staff">Venenga JS</span>, Sterbenz SC, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Acute, dose-response effects of guayusa leaf extract on mood, cognitive and motor-cognitive performance, and blood pressure, heart rate, and ventricular repolarization</h3>
+        <p class="pub-cite"><span class="jrnl">J Int Soc Sports Nutr</span> &middot; 2024 &middot; 21(1):2379424</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/15502783.2024.2379424" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39014963/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11257001/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Berry AC, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Flywheel resistance training promotes unique muscle architectural and performance-related adaptations in young adults</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Sport Sci</span> &middot; 2024 &middot; 24(12):1765-1778</p>
+        <p class="pub-links"><a href="https://doi.org/10.1002/ejsc.12215" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39498804/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11621374/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">West KS</span>, <span class="member" title="VSPR Lab trainee or staff">Helwig NJ</span>, <span class="member" title="VSPR Lab trainee or staff">Schwager LE</span>, <span class="member" title="VSPR Lab trainee or staff">Hart TW</span>, <span class="member" title="VSPR Lab trainee or staff">Zucker AC</span>, <span class="member" title="VSPR Lab trainee or staff">Venenga JS</span>, <span class="member" title="VSPR Lab trainee or staff">Flores M</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Habitual preexercise caffeine supplementation prevents exercise training-induced attenuation of exercising systolic blood pressure and double product</h3>
+        <p class="pub-cite"><span class="jrnl">J Appl Physiol (1985)</span> &middot; 2024 &middot; 138(2):358-365</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/japplphysiol.00874.2024" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39726136/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12182273/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Trachta ER, Wolf MS, Berry AC, Stanhewicz AE, Carr LJ, Gibbs BB, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Resistance exercise breaks during prolonged sitting augment the blood flow response to a subsequent oral glucose load in sedentary adults</h3>
+        <p class="pub-cite"><span class="jrnl">Exp Physiol</span> &middot; 2024 &middot; 111(6):3082-3098</p>
+        <p class="pub-links"><a href="https://doi.org/10.1113/EP091535" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39093318/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13238634/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">West K</span>, Spears K, Joyner B, Smith C, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Grosicki GJ, Siekirk NJ</p>
+        <h3 class="pub-title">The acute effect of passively assisted trunk stretching on central arterial stiffness and blood pressure in middle-aged to older adults</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2024 &middot; 124(6):1683-1692</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-023-05389-9" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/38217670/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2023</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Acute effects of daily step count on postprandial metabolism and resting fat oxidation: a randomized controlled trial</h3>
+        <p class="pub-cite"><span class="jrnl">J Appl Physiol (1985)</span> &middot; 2023 &middot; 135(4):812-822</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/japplphysiol.00052.2023" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37560764/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Schwager LE</span>, <span class="member" title="VSPR Lab trainee or staff">Helwig NJ</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Alpers JP, Schulte SL, Lockwood CM, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Novel Energy Drink Improves Cognitive Function and Mood, without Influencing Myocardial Oxygen Demand or Ventricular Repolarization in Adult Gamers: A Randomized, Double-Blind, Placebo-Controlled, Crossover Trial</h3>
+        <p class="pub-cite"><span class="jrnl">J Am Nutr Assoc</span> &middot; 2023 &middot; 43(1):33-47</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/27697061.2023.2207096" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37186677/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Gallagher J, Bayman EO, Cadmus-Bertram LA, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Pearlman A, Whitaker KM, Carr LJ</p>
+        <h3 class="pub-title">Physical Activity Among Rural Men: Barriers and Preferences</h3>
+        <p class="pub-cite"><span class="jrnl">Prev Chronic Dis</span> &middot; 2023 &middot; 20:E88</p>
+        <p class="pub-links"><a href="https://doi.org/10.5888/pcd20.230046" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37797290/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10557978/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Keirns BH, Sciarrillo CM, Poindexter KL, Dixon MD, Medlin AR, Koemel NA, Hart SM, Geist CH, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Lucas EA, Emerson SR</p>
+        <h3 class="pub-title">Postprandial triglycerides across the aging spectrum: A secondary analysis utilizing an abbreviated fat tolerance test</h3>
+        <p class="pub-cite"><span class="jrnl">Nutr Metab Cardiovasc Dis</span> &middot; 2023 &middot; 34(1):121-125</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.numecd.2023.08.017" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37788958/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Tomko PM, Sciarrillo CM, Emerson SR, Thomas EBK, Taylor A, Teague TK, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Progressive exercise training improves cardiovascular psychophysiological outcomes in young adult women with a history of adverse childhood experiences</h3>
+        <p class="pub-cite"><span class="jrnl">J Appl Physiol (1985)</span> &middot; 2023 &middot; 134(3):742-752</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/japplphysiol.00524.2022" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/36727632/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10027078/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, Berry AC, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Progressive iso-inertial resistance exercise promotes more favorable cardiovascular adaptations than traditional resistance exercise in young adults</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2023 &middot; 326(1):H32-H43</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00402.2023" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37889252/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12080917/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, Stanhewicz AE, Whitaker KM, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Resistance exercise lowers blood pressure and improves vascular endothelial function in individuals with elevated blood pressure or stage-1 hypertension</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2023 &middot; 326(1):H256-H269</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00386.2023" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37975709/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11219052/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Tahsin CT, Michopoulos V, Powers A, Park J, Ahmed Z, Cullen K, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Keller-Ross M, Fonkoue IT</p>
+        <h3 class="pub-title">Sleep efficiency and PTSD symptom severity predict microvascular endothelial function and arterial stiffness in young, trauma-exposed women</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2023 &middot; 325(4):H739-H750</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00169.2023" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37505472/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10642999/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Robinson AT, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Sanchez SO, Haack KKV, Lee DL, Mathis KW, Warrington JP</p>
+        <h3 class="pub-title">Supporting and promoting Black physiologists: how can the APS help?</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2023 &middot; 324(6):H782-H785</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00082.2023" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37000608/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10191122/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2022</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Metabolic and microvascular function assessed using near-infrared spectroscopy with vascular occlusion in women: age differences and reliability</h3>
+        <p class="pub-cite"><span class="jrnl">Exp Physiol</span> &middot; 2022 &middot; 108(1):123-134</p>
+        <p class="pub-links"><a href="https://doi.org/10.1113/EP090540" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/36420592/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10103776/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2021</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Tomko PM, Sciarrillo CM, Emerson SR, Taylor A, Teague TK</p>
+        <h3 class="pub-title">Childhood psychosocial stress is linked with impaired vascular endothelial function, lower SIRT1, and oxidative stress in young adulthood</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2021 &middot; 321(3):H532-H541</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00123.2021" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/34328346/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8461842/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Miramonti AA, Hill EC, Smith CM, Cochrane-Snyman KC, Housh TJ, Cramer JT</p>
+        <h3 class="pub-title">Mechanomyographic Amplitude Is Sensitive to Load-Dependent Neuromuscular Adaptations in Response to Resistance Training</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2021 &middot; 35(11):3265-3269</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000003276" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/31453941/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Moghaddam M, Estrada CA, Muddle TWD, Magrini MA, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Jacobson BH</p>
+        <h3 class="pub-title">Similar Anaerobic and Aerobic Adaptations After 2 High-Intensity Interval Training Configurations: 10:5 s vs. 20:10 s Work-to-Rest Ratio</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2021 &middot; 35(6):1685-1692</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000002939" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/30829982/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Magrini MA, Colquhoun RJ, Ferrell MC, Fleming SR, Mota JA, Siedlik JA, Poidomani NM, <span class="pi" title="Principal investigator">Jenkins NDM</span>, DeFreitas JM</p>
+        <h3 class="pub-title">The Influence of Motor Unit Number and Muscle Activation on Early Phase Rate of Torque Development in Younger and Older Men</h3>
+        <p class="pub-cite"><span class="jrnl">J Mot Behav</span> &middot; 2021 &middot; 54(4):422-428</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/00222895.2021.2001412" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/34763617/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Dixon MD, Koemel NA, Sciarrillo CM, Lucas EA, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Emerson SR</p>
+        <h3 class="pub-title">The reliability of an abbreviated fat tolerance test: A comparison to the oral glucose tolerance test</h3>
+        <p class="pub-cite"><span class="jrnl">Clin Nutr ESPEN</span> &middot; 2021 &middot; 43:428-435</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.clnesp.2021.03.010" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/34024551/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Sciarrillo CM, Koemel NA, Keirns BH, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, Rosenkranz SK, Kurti SP, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Emerson SR</p>
+        <h3 class="pub-title">Who would benefit most from postprandial lipid screening?</h3>
+        <p class="pub-cite"><span class="jrnl">Clin Nutr</span> &middot; 2021 &middot; 40(7):4762-4771</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.clnu.2021.04.022" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/34242916/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10198766/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2020</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Luera MJ, Dowling B, Muddle TWD, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Differences in Rotational Kinetics and Kinematics for Professional Baseball Pitchers With Higher Versus Lower Pitch Velocities</h3>
+        <p class="pub-cite"><span class="jrnl">J Appl Biomech</span> &middot; 2020 &middot; 36(2):68-75</p>
+        <p class="pub-links"><a href="https://doi.org/10.1123/jab.2019-0235" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/32143191/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Electromyographic amplitude versus torque relationships are different in young versus postmenopausal females and are related to muscle mass after controlling for bodyweight</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2020 &middot; 121(2):479-488</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-020-04532-0" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/33123807/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9762459/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Muddle TWD, Colquhoun RJ</p>
+        <h3 class="pub-title">Increases in motor unit action potential amplitudes are related to muscle hypertrophy following eight weeks of high-intensity exercise training in females</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Sport Sci</span> &middot; 2020 &middot; 21(10):1403-1413</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/17461391.2020.1836262" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/33043836/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9762464/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Bergstrom HC, Housh TJ, Dinyer TK, Byrd TM, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Cochrane-Snyman KC, Succi PJ, Schmidt RJ, Johnson GO, Zuniga JM</p>
+        <h3 class="pub-title">Neuromuscular responses of the superficial quadriceps femoris muscles: muscle specific fatigue and inter-individual variability during severe intensity treadmill running</h3>
+        <p class="pub-cite"><span class="jrnl">J Musculoskelet Neuronal Interact</span> &middot; 2020 &middot; 20(1):77-87</p>
+        <p class="pub-links"><a href="https://pubmed.ncbi.nlm.nih.gov/32131371/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7104590/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">McKay BD, Miramonti AA, Gillen ZM, Leutzinger TJ, Mendez AI, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Cramer JT</p>
+        <h3 class="pub-title">Normative Reference Values for High School-Aged American Football Players</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2020 &middot; 34(10):2849-2856</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000002532" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29489728/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">McKay BD, Miramonti AA, Gillen ZM, Leutzinger TJ, Mendez AI, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Cramer JT</p>
+        <h3 class="pub-title">Normative Reference Values for High School-Aged American Football Players: Proagility Drill and 40-Yard Dash Split Times</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2020 &middot; 34(4):1184-1187</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000002930" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/30418328/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Koemel NA, Sciarrillo CM, Bode KB, Dixon MD, Lucas EA, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Emerson SR</p>
+        <h3 class="pub-title">Postprandial Metabolism and Vascular Function: Impact of Aging and Physical Activity Level</h3>
+        <p class="pub-cite"><span class="jrnl">Int J Sport Nutr Exerc Metab</span> &middot; 2020 &middot; 30(6):412-419</p>
+        <p class="pub-links"><a href="https://doi.org/10.1123/ijsnem.2020-0063" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/32908019/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, Sciarrillo CM, Koemel NA, Colquhoun RJ, Emerson SR</p>
+        <h3 class="pub-title">Resistance exercise attenuates postprandial metabolic responses to a high-fat meal similarly in younger and older men</h3>
+        <p class="pub-cite"><span class="jrnl">Nutr Res</span> &middot; 2020 &middot; 83:73-85</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.nutres.2020.08.012" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/33032071/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2019</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Tomko PM, Colquhoun RJ, Muddle TWD, Emerson SR, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Genetic Polymorphisms in ADORA2A and CYP1A2 Influence Caffeine&#x27;s Effect on Postprandial Glycaemia</h3>
+        <p class="pub-cite"><span class="jrnl">Sci Rep</span> &middot; 2019 &middot; 9(1):10532</p>
+        <p class="pub-links"><a href="https://doi.org/10.1038/s41598-019-46931-0" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/31324842/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6642114/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Muddle TWD, Magrini MA, Colquhoun RJ, Luera MJ, Tomko PM, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Impact of Fatiguing, Submaximal High- vs. Low-Torque Isometric Exercise on Acute Muscle Swelling, and Echo Intensity in Resistance-Trained Men</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2019 &middot; 33(4):1007-1019</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000003033" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/30789573/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Tomko PM, Colquhoun RJ, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, Magrini MA, Muddle TWD, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Maximal contraction methods influence the magnitude and reliability of global electromyographic signal characteristics</h3>
+        <p class="pub-cite"><span class="jrnl">J Electromyogr Kinesiol</span> &middot; 2019 &middot; 48:121-127</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.jelekin.2019.07.002" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/31344640/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Dinyer TK, Byrd MT, Cochrane-Snyman KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Schmidt RJ, Johnson GO, Bergstrom HC</p>
+        <h3 class="pub-title">Time course of changes in neuromuscular responses during rides to exhaustion above and below critical power</h3>
+        <p class="pub-cite"><span class="jrnl">J Musculoskelet Neuronal Interact</span> &middot; 2019 &middot; 19(3):266-275</p>
+        <p class="pub-links"><a href="https://pubmed.ncbi.nlm.nih.gov/31475933/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6737559/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Cochrane-Snyman KC, Housh TJ, Smith CM, Hill EC, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Treadmill running using an RPE-clamp model: mediators of perception and implications for exercise prescription</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2019 &middot; 119(9):2083-2094</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-019-04197-4" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/31372804/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2018</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Muddle TWD, Colquhoun RJ, Magrini MA, Luera MJ, DeFreitas JM, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Effects of fatiguing, submaximal high- versus low-torque isometric exercise on motor unit recruitment and firing behavior</h3>
+        <p class="pub-cite"><span class="jrnl">Physiol Rep</span> &middot; 2018 &middot; 6(8):e13675</p>
+        <p class="pub-links"><a href="https://doi.org/10.14814/phy2.13675" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29673119/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5907942/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Colquhoun RJ, Tomko PM, Gradnigo T, Magrini MA, Muddle TWD, Fleming S, Ferrell M, El-Sohemy A</p>
+        <h3 class="pub-title">Genetic variant in the β-adrenergic receptor (Arg16Gly) influences fat-free mass, muscle strength and motor unit behaviour in young men</h3>
+        <p class="pub-cite"><span class="jrnl">Exp Physiol</span> &middot; 2018 &middot; 103(12):1645-1655</p>
+        <p class="pub-links"><a href="https://doi.org/10.1113/EP087145" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/30267546/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Tomko PM, Colquhoun RJ, Magrini MA, Muddle TWD, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Global electromyographic signal characteristics depend on maximal isometric contraction method in the knee extensors</h3>
+        <p class="pub-cite"><span class="jrnl">J Electromyogr Kinesiol</span> &middot; 2018 &middot; 42:111-116</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.jelekin.2018.07.002" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/30015134/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Colquhoun RJ, Magrini MA, Haun CT, Muddle TWD, Tomko PM, Luera MJ, Mackey CS, Vann CG, Martin JS, Young KC, DeFreitas JM, Roberts MD, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Muscle phenotype is related to motor unit behavior of the vastus lateralis during maximal isometric contractions</h3>
+        <p class="pub-cite"><span class="jrnl">Physiol Rep</span> &middot; 2018 &middot; 6(5)</p>
+        <p class="pub-links"><a href="https://doi.org/10.14814/phy2.13636" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29527830/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5845862/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Gillen ZM, Miramonti AA, McKay BD, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Leutzinger TJ, Cramer JT</p>
+        <h3 class="pub-title">Reliability and Sensitivity of the Power Push-up Test for Upper-Body Strength and Power in 6-15-Year-Old Male Athletes</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2018 &middot; 32(1):83-96</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000002313" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29084096/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Luera MJ, Dowling B, Magrini MA, Muddle TWD, Colquhoun RJ, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Role of Rotational Kinematics in Minimizing Elbow Varus Torques for Professional Versus High School Pitchers</h3>
+        <p class="pub-cite"><span class="jrnl">Orthop J Sports Med</span> &middot; 2018 &middot; 6(3):2325967118760780</p>
+        <p class="pub-links"><a href="https://doi.org/10.1177/2325967118760780" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29581995/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5863871/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Colquhoun RJ, Tomko PM, Magrini MA, Muddle TWD, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">The influence of input excitation on the inter- and intra-day reliability of the motor unit firing rate versus recruitment threshold relationship</h3>
+        <p class="pub-cite"><span class="jrnl">J Neurophysiol</span> &middot; 2018 &middot; 120(6):3131-3139</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/jn.00490.2018" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/30355024/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Colquhoun RJ, Gai CM, Aguilar D, Bove D, Dolan J, Vargas A, Couvillion K, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Campbell BI</p>
+        <h3 class="pub-title">Training Volume, Not Frequency, Indicative of Maximal Strength Adaptations to Resistance Training</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2018 &middot; 32(5):1207-1213</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000002414" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/29324578/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2017</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Bergstrom HC, Housh TJ, Cochrane-Snyman KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Byrd MT, Switalla JR, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">A Model for Identifying Intensity Zones Above Critical Velocity</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2017 &middot; 31(12):3260-3265</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000001769" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28248750/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Martin JS, Mumford PW, Haun CT, Luera MJ, Muddle TWD, Colquhoun RJ, Feeney MP, Mackey CS, Roberson PA, Young KC, Pascoe DD, DeFreitas JM, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Roberts MD</p>
+        <h3 class="pub-title">Effects of a pre-workout supplement on hyperemia following leg extension resistance exercise to failure with different resistance loads</h3>
+        <p class="pub-cite"><span class="jrnl">J Int Soc Sports Nutr</span> &middot; 2017 &middot; 14:38</p>
+        <p class="pub-links"><a href="https://doi.org/10.1186/s12970-017-0195-6" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28959158/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5615454/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">McKay BD, Yeo NM, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Miramonti AA, Cramer JT</p>
+        <h3 class="pub-title">Exertional Rhabdomyolysis in a 21-Year-Old Healthy Woman: A Case Report</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2017 &middot; 31(5):1403-1410</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000001824" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28146033/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Miramonti AA, Hill EC, Smith CM, Cochrane-Snyman KC, Housh TJ, Cramer JT</p>
+        <h3 class="pub-title">Greater Neural Adaptations following High- vs. Low-Load Resistance Training</h3>
+        <p class="pub-cite"><span class="jrnl">Front Physiol</span> &middot; 2017 &middot; 8:331</p>
+        <p class="pub-links"><a href="https://doi.org/10.3389/fphys.2017.00331" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28611677/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5447067/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Palmer TB, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Thompson BJ, Cramer JT</p>
+        <h3 class="pub-title">Influence of stretching velocity on musculotendinous stiffness of the hamstrings during passive straight-leg raise assessments</h3>
+        <p class="pub-cite"><span class="jrnl">Musculoskelet Sci Pract</span> &middot; 2017 &middot; 30:80-85</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.msksp.2016.12.018" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28715304/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Miramonti AA, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Oza PD, Weir JP, Cramer JT</p>
+        <h3 class="pub-title">Mechanomyographic responses during recruitment curves in the soleus muscle</h3>
+        <p class="pub-cite"><span class="jrnl">Muscle Nerve</span> &middot; 2017 &middot; 56(1):107-116</p>
+        <p class="pub-links"><a href="https://doi.org/10.1002/mus.25432" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27718510/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Haun CT, Mumford PW, Roberson PA, Romero MA, Mobley CB, Kephart WC, Anderson RG, Colquhoun RJ, Muddle TWD, Luera MJ, Mackey CS, Pascoe DD, Young KC, Martin JS, DeFreitas JM, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Roberts MD</p>
+        <h3 class="pub-title">Molecular, neuromuscular, and recovery responses to light versus heavy resistance exercise in young men</h3>
+        <p class="pub-cite"><span class="jrnl">Physiol Rep</span> &middot; 2017 &middot; 5(18)</p>
+        <p class="pub-links"><a href="https://doi.org/10.14814/phy2.13457" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28963127/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5617935/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Cramer JT</p>
+        <h3 class="pub-title">Reliability and Minimum Detectable Change for Common Clinical Physical Function Tests in Sarcopenic Men and Women</h3>
+        <p class="pub-cite"><span class="jrnl">J Am Geriatr Soc</span> &middot; 2017 &middot; 65(4):839-846</p>
+        <p class="pub-links"><a href="https://doi.org/10.1111/jgs.14769" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28295148/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Hill EC, Housh TJ, Smith CM, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">The Effects of Work-to-Rest Ratios on Torque, Electromyographic, and Mechanomyographic Responses to Fatiguing Workbouts</h3>
+        <p class="pub-cite"><span class="jrnl">Int J Exerc Sci</span> &middot; 2017 &middot; 10(4):580-591</p>
+        <p class="pub-links"><a href="https://doi.org/10.70252/TONN2278" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28674602/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5466413/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2016</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Smith CM, Housh TJ, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Hill EC, Cochrane KC, Miramonti AA, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">Combining regression and mean comparisons to identify the time course of changes in neuromuscular responses during the process of fatigue</h3>
+        <p class="pub-cite"><span class="jrnl">Physiol Meas</span> &middot; 2016 &middot; 37(11):1993-2002</p>
+        <p class="pub-links"><a href="https://doi.org/10.1088/0967-3334/37/11/1993" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27754975/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Hill EC, Housh TJ, Smith CM, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Cramer JT, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">Effect of sex on torque, recovery, EMG, and MMG responses to fatigue</h3>
+        <p class="pub-cite"><span class="jrnl">J Musculoskelet Neuronal Interact</span> &middot; 2016 &middot; 16(4):310-317</p>
+        <p class="pub-links"><a href="https://pubmed.ncbi.nlm.nih.gov/27973383/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5259572/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Smith CM, Housh TJ, Hill EC, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">Effects of fatiguing constant versus alternating intensity intermittent isometric muscle actions on maximal torque and neuromuscular responses</h3>
+        <p class="pub-cite"><span class="jrnl">J Musculoskelet Neuronal Interact</span> &middot; 2016 &middot; 16(4):318-326</p>
+        <p class="pub-links"><a href="https://pubmed.ncbi.nlm.nih.gov/27973384/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5259573/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Miramonti AA, McKay BD, Yeo NM, Smith CM, Hill EC, Cochrane KC, Cramer JT</p>
+        <h3 class="pub-title">Effects of rumenic acid rich conjugated linoleic acid supplementation on cognitive function and handgrip performance in older men and women</h3>
+        <p class="pub-cite"><span class="jrnl">Exp Gerontol</span> &middot; 2016 &middot; 84:1-11</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.exger.2016.08.004" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27521997/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Hill EC, Housh TJ, Camic CL, Smith CM, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Cramer JT, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">Effects of Velocity on Electromyographic, Mechanomyographic, and Torque Responses to Repeated Eccentric Muscle Actions</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2016 &middot; 30(6):1743-51</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000001266" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/26566165/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Smith CM, Housh TJ, Herda T, Zuniga JM, Camic CL, Bergstrom HC, Smith DB, Weir JP, Cramer JT, Hill EC, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson G</p>
+        <h3 class="pub-title">Electromyographic Responses from the Vastus Medialis during Isometric Muscle Actions</h3>
+        <p class="pub-cite"><span class="jrnl">Int J Sports Med</span> &middot; 2016 &middot; 37(8):647-52</p>
+        <p class="pub-links"><a href="https://doi.org/10.1055/s-0035-1564174" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27176892/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Smith CM, Housh TJ, Zuniga JM, Camic CL, Bergstrom HC, Smith DB, Herda T, Weir JP, Hill EC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson G</p>
+        <h3 class="pub-title">Influences of Interelectrode Distance and Innervation Zone on Electromyographic Signals</h3>
+        <p class="pub-cite"><span class="jrnl">Int J Sports Med</span> &middot; 2016 &middot; 38(2):111-117</p>
+        <p class="pub-links"><a href="https://doi.org/10.1055/s-0042-119398" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/28006829/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Cochrane-Snyman KC, Housh TJ, Smith CM, Hill EC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">Inter-individual variability in the patterns of responses for electromyography and mechanomyography during cycle ergometry using an RPE-clamp model</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2016 &middot; 116(9):1639-49</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-016-3394-y" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27325528/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Buckner SL, Bergstrom HC, Cochrane KC, Hill EC, Smith CM, Schmidt RJ, Johnson GO, Cramer JT</p>
+        <h3 class="pub-title">Neuromuscular Adaptations After 2 and 4 Weeks of 80% Versus 30% 1 Repetition Maximum Resistance Training to Failure</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2016 &middot; 30(8):2174-85</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000001308" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/26848545/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Smith CM, Housh TJ, Herda TJ, Zuniga JM, Camic CL, Bergstrom HC, Smith DB, Weir JP, Hill EC, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">Time Course of Changes in Neuromuscular Parameters During Sustained Isometric Muscle Actions</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2016 &middot; 30(10):2697-2702</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000001547" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27658233/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2015</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Bergstrom HC, Housh TJ, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Buckner SL, Goldsmith JA, Zuniga JM, Schmidt RJ, Johnson GO, Cramer JT</p>
+        <h3 class="pub-title">Application of the Critical Heart Model to Treadmill Running</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2015 &middot; 29(8):2237-48</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000000869" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25647653/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Buckner SL, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Costa PB, Ryan ED, Herda TJ, Cramer JT</p>
+        <h3 class="pub-title">Comparing passive angle-torque curves recorded simultaneously with a load cell versus an isokinetic dynamometer during dorsiflexion stretch tolerance assessments</h3>
+        <p class="pub-cite"><span class="jrnl">Med Eng Phys</span> &middot; 2015 &middot; 37(5):494-8</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.medengphy.2015.02.010" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25782330/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Cochrane KC, Housh TJ, Bergstrom HC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Johnson GO, Housh DJ, Traylor DA, Lewis RW, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Dissociations among direct and indirect indicators of adiposity in young wrestlers</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2015 &middot; 29(2):408-15</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000000405" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/24513619/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Smith CM, Housh TJ, Herda TJ, Zuniga JM, Ryan ED, Camic CL, Bergstrom HC, Smith DB, Weir JP, Cramer JT, Hill EC, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson GO</p>
+        <h3 class="pub-title">Effects of the innervation zone on the time and frequency domain parameters of the surface electromyographic signal</h3>
+        <p class="pub-cite"><span class="jrnl">J Electromyogr Kinesiol</span> &middot; 2015 &middot; 25(4):565-70</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.jelekin.2015.04.014" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/26014918/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Cochrane KC, Housh TJ, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Bergstrom HC, Smith CM, Hill EC, Johnson GO, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Electromyographic, mechanomyographic, and metabolic responses during cycle ergometry at a constant rating of perceived exertion</h3>
+        <p class="pub-cite"><span class="jrnl">Appl Physiol Nutr Metab</span> &middot; 2015 &middot; 40(11):1178-85</p>
+        <p class="pub-links"><a href="https://doi.org/10.1139/apnm-2015-0144" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/26481288/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Bergstrom HC, Housh TJ, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Zuniga JM, Buckner SL, Goldsmith JA, Schmidt RJ, Johnson GO, Cramer JT</p>
+        <h3 class="pub-title">Factors underlying the perception of effort during constant heart rate running above and below the critical heart rate</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2015 &middot; 115(10):2231-41</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-015-3204-y" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/26108674/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Cramer JT, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Mustad VA, Weir JP</p>
+        <h3 class="pub-title">Isokinetic Dynamometry in Healthy Versus Sarcopenic and Malnourished Elderly: Beyond Simple Measurements of Muscle Strength</h3>
+        <p class="pub-cite"><span class="jrnl">J Appl Gerontol</span> &middot; 2015 &middot; 36(6):709-732</p>
+        <p class="pub-links"><a href="https://doi.org/10.1177/0733464815584669" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25948290/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Bergstrom HC, Cochrane KC, Hill EC, Smith CM, Johnson GO, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Muscle activation during three sets to failure at 80 vs. 30% 1RM resistance exercise</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2015 &middot; 115(11):2335-47</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-015-3214-9" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/26159316/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Cochrane KC, Housh TJ, Bergstrom HC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Johnson G, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Physiological Responses during Cycle Ergometry at a Constant Perception of Effort</h3>
+        <p class="pub-cite"><span class="jrnl">Int J Sports Med</span> &middot; 2015 &middot; 36(6):466-73</p>
+        <p class="pub-links"><a href="https://doi.org/10.1055/s-0034-1396826" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25700102/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Cochrane KC, Housh TJ, Smith CM, Hill EC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Johnson GO, Housh DJ, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Relative contributions of strength, anthropometric, and body composition characteristics to estimated propulsive force in young male swimmers</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2015 &middot; 29(6):1473-9</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000000942" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25785708/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Palmer TB, Cochrane KC, Bergstrom HC, Johnson GO, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Relative differences in strength and power from slow to fast isokinetic velocities may reflect dynapenia</h3>
+        <p class="pub-cite"><span class="jrnl">Muscle Nerve</span> &middot; 2015 &middot; 52(1):120-30</p>
+        <p class="pub-links"><a href="https://doi.org/10.1002/mus.24505" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25363299/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Miller JM, Buckner SL, Cochrane KC, Bergstrom HC, Hill EC, Smith CM, Housh TJ, Cramer JT</p>
+        <h3 class="pub-title">Test-Retest Reliability of Single Transverse versus Panoramic Ultrasound Imaging for Muscle Size and Echo Intensity of the Biceps Brachii</h3>
+        <p class="pub-cite"><span class="jrnl">Ultrasound Med Biol</span> &middot; 2015 &middot; 41(6):1584-91</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.ultrasmedbio.2015.01.017" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25746907/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2014</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Buckner SL, Cochrane KC, Bergstrom HC, Palmer TB, Johnson GO, Schmidt RJ, Housh TJ, Cramer JT</p>
+        <h3 class="pub-title">Age-related differences in rates of torque development and rise in EMG are eliminated by normalization</h3>
+        <p class="pub-cite"><span class="jrnl">Exp Gerontol</span> &middot; 2014 &middot; 57:18-28</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.exger.2014.04.015" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/24806786/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Buckner SL, Cochrane KC, Bergstrom HC, Goldsmith JA, Weir JP, Housh TJ, Cramer JT</p>
+        <h3 class="pub-title">CLA supplementation and aerobic exercise lower blood triacylglycerol, but have no effect on peak oxygen uptake or cardiorespiratory fatigue thresholds</h3>
+        <p class="pub-cite"><span class="jrnl">Lipids</span> &middot; 2014 &middot; 49(9):871-80</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s11745-014-3929-0" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25034667/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Buckner SL, Baker RB, Bergstrom HC, Cochrane KC, Weir JP, Housh TJ, Cramer JT</p>
+        <h3 class="pub-title">Effects of 6 weeks of aerobic exercise combined with conjugated linoleic acid on the physical working capacity at fatigue threshold</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2014 &middot; 28(8):2127-35</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000000513" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/24796987/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Cochrane KC, Bergstrom HC, Traylor DA, Lewis RW, Buckner SL, Schmidt RJ, Johnson GO, Cramer JT</p>
+        <h3 class="pub-title">Effects of anatabine and unilateral maximal eccentric isokinetic muscle actions on serum markers of muscle damage and inflammation</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Pharmacol</span> &middot; 2014 &middot; 728:161-6</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.ejphar.2014.01.054" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/24509134/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Bergstrom HC, Housh TJ, Traylor DA, Lewis RW, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Schmidt RJ, Johnson GO, Housh DJ, Cramer JT</p>
+        <h3 class="pub-title">Metabolic, cardiovascular, and perceptual responses to a thermogenic nutritional supplement at rest, during exercise, and recovery in men</h3>
+        <p class="pub-cite"><span class="jrnl">J Strength Cond Res</span> &middot; 2014 &middot; 28(8):2154-63</p>
+        <p class="pub-links"><a href="https://doi.org/10.1519/JSC.0000000000000369" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/24513614/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Buckner SL, Bergstrom HC, Cochrane KC, Goldsmith JA, Housh TJ, Johnson GO, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Reliability and relationships among handgrip strength, leg extensor strength and power, and balance in older men</h3>
+        <p class="pub-cite"><span class="jrnl">Exp Gerontol</span> &middot; 2014 &middot; 58:47-50</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.exger.2014.07.007" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25019471/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Traylor DA, Cochrane KC, Bergstrom HC, Lewis RW, Schmidt RJ, Johnson GO, Cramer JT</p>
+        <h3 class="pub-title">The rate of torque development: a unique, non-invasive indicator of eccentric-induced muscle damage?</h3>
+        <p class="pub-cite"><span class="jrnl">Int J Sports Med</span> &middot; 2014 &middot; 35(14):1190-5</p>
+        <p class="pub-links"><a href="https://doi.org/10.1055/s-0034-1375696" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/25259592/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2013</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Bergstrom HC, Housh TJ, Cochrane KC, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Lewis RW, Traylor DA, Zuniga JM, Schmidt RJ, Johnson GO, Cramer JT</p>
+        <h3 class="pub-title">An examination of neuromuscular and metabolic fatigue thresholds</h3>
+        <p class="pub-cite"><span class="jrnl">Physiol Meas</span> &middot; 2013 &middot; 34(10):1253-67</p>
+        <p class="pub-links"><a href="https://doi.org/10.1088/0967-3334/34/10/1253" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/24021781/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Palmer TB, Cramer JT</p>
+        <h3 class="pub-title">Comparing the reliability of voluntary and evoked muscle actions</h3>
+        <p class="pub-cite"><span class="jrnl">Clin Physiol Funct Imaging</span> &middot; 2013 &middot; 34(6):434-41</p>
+        <p class="pub-links"><a href="https://doi.org/10.1111/cpf.12113" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/24299239/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Bergstrom HC, Housh TJ, Traylor DA, Lewis RW, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Cochrane KC, Schmidt RJ, Johnson GO, Housh DJ</p>
+        <h3 class="pub-title">Physiologic responses to a thermogenic nutritional supplement at rest, during low-intensity exercise, and during recovery from exercise in college-aged women</h3>
+        <p class="pub-cite"><span class="jrnl">Appl Physiol Nutr Metab</span> &middot; 2013 &middot; 38(9):988-95</p>
+        <p class="pub-links"><a href="https://doi.org/10.1139/apnm-2013-0029" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/23905665/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Palmer TB, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Thompson BJ, Smith DB, Cramer JT</p>
+        <h3 class="pub-title">The relationship between passive stiffness and muscle power output: influence of muscle cross-sectional area normalization</h3>
+        <p class="pub-cite"><span class="jrnl">Muscle Nerve</span> &middot; 2013 &middot; 49(1):69-75</p>
+        <p class="pub-links"><a href="https://doi.org/10.1002/mus.23861" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/23558664/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2012</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Hawkey MJ, Costa PB, Fiddler RE, Thompson BJ, Ryan ED, Smith D, Sobolewski EJ, Conchola EC, Akehi K, Cramer JT</p>
+        <h3 class="pub-title">Functional hamstrings: quadriceps ratios in elite women&#x27;s soccer players</h3>
+        <p class="pub-cite"><span class="jrnl">J Sports Sci</span> &middot; 2012 &middot; 31(6):612-7</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/02640414.2012.742958" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/23150930/" rel="noopener">pubmed</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors">Palmer TB, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Cramer JT</p>
+        <h3 class="pub-title">Reliability of manual versus automated techniques for assessing passive stiffness of the posterior muscles of the hip and thigh</h3>
+        <p class="pub-cite"><span class="jrnl">J Sports Sci</span> &middot; 2012 &middot; 31(8):867-77</p>
+        <p class="pub-links"><a href="https://doi.org/10.1080/02640414.2012.753159" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/23256778/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="group" id="review">
+    <div class="group-head">
+      <h2 class="group-title">Reviews and guidelines</h2>
+      <p class="group-blurb">Invited reviews, consensus statements, and methodological guidelines.</p>
+      <p class="group-count">5</p>
+    </div>
+<div class="year">
+      <p class="year-label">2026</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Carter JR, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Bigalke JA, Robinson AT, Keller-Ross ML, Greaney JL, Fonkoue IT, Fadel PJ, Macefield VG, Charkoudian N, Levine BD, Joyner MJ</p>
+        <h3 class="pub-title">Guidelines for rigor and reproducibility of heart rate variability within human cardiovascular research</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2026 &middot; 331(3):H918-H943</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00041.2026" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/42495990/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13477148/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2024</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Jones R, Robinson AT, Beach LB, Lindsey ML, Kirabo A, Hinton A, Erlandson KM, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Exercise to Prevent Accelerated Vascular Aging in People Living With HIV</h3>
+        <p class="pub-cite"><span class="jrnl">Circ Res</span> &middot; 2024 &middot; 134(11):1607-1635</p>
+        <p class="pub-links"><a href="https://doi.org/10.1161/CIRCRESAHA.124.323975" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/38781293/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11126195/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2023</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, <span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">The effects of sleep disruption on metabolism, hunger, and satiety, and the influence of psychosocial stress and exercise: A narrative review</h3>
+        <p class="pub-cite"><span class="jrnl">Diabetes Metab Res Rev</span> &middot; 2023 &middot; 40(2):e3667</p>
+        <p class="pub-links"><a href="https://doi.org/10.1002/dmrr.3667" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/37269143/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2021</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Guest NS, VanDusseldorp TA, Nelson MT, Grgic J, Schoenfeld BJ, <span class="pi" title="Principal investigator">Jenkins NDM</span>, Arent SM, Antonio J, Stout JR, Trexler ET, Smith-Ryan AE, Goldstein ER, Kalman DS, Campbell BI</p>
+        <h3 class="pub-title">International society of sports nutrition position stand: caffeine and exercise performance</h3>
+        <p class="pub-cite"><span class="jrnl">J Int Soc Sports Nutr</span> &middot; 2021 &middot; 18(1):1</p>
+        <p class="pub-links"><a href="https://doi.org/10.1186/s12970-020-00383-4" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/33388079/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7777221/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">Banks NF</span>, <span class="member" title="VSPR Lab trainee or staff">Rogers EM</span>, Church DD, Ferrando AA, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">The contributory role of vascular health in age-related anabolic resistance</h3>
+        <p class="pub-cite"><span class="jrnl">J Cachexia Sarcopenia Muscle</span> &middot; 2021 &middot; 13(1):114-127</p>
+        <p class="pub-links"><a href="https://doi.org/10.1002/jcsm.12898" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/34951146/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8818606/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="group" id="commentary">
+    <div class="group-head">
+      <h2 class="group-title">Editorials and commentary</h2>
+      <p class="group-blurb">Invited commentary and correspondence.</p>
+      <p class="group-count">6</p>
+    </div>
+<div class="year">
+      <p class="year-label">2026</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors">Bigalke JA, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Sleeping on oxidative stress as a mechanism underlying cardiovascular risk in chronic anxiety</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2026 &middot; 330(4):H1291-H1292</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00219.2026" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/41875237/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2024</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="member" title="VSPR Lab trainee or staff">West KS</span>, <span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Acceleration of age-related impairments in vascular function in women: interrogation of the (un)usual hormonal suspects</h3>
+        <p class="pub-cite"><span class="jrnl">Am J Physiol Heart Circ Physiol</span> &middot; 2024 &middot; 327(6):H1387-H1389</p>
+        <p class="pub-links"><a href="https://doi.org/10.1152/ajpheart.00730.2024" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39454096/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11684941/" rel="noopener">full text</a></p>
+      </li>
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Cardiovascular Consequences of Posttraumatic Stress Disorder: Exaggerated Vasoconstrictor Responsiveness to Personalized Trauma Recall</h3>
+        <p class="pub-cite"><span class="jrnl">Biol Psychiatry</span> &middot; 2024 &middot; 96(4):244-246</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.biopsych.2024.06.007" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/39048247/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11419568/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2022</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Robinson AT</p>
+        <h3 class="pub-title">How do Adverse Childhood Experiences get Under the Skin to Promote Cardiovascular Disease? A Focus on Vascular Health</h3>
+        <p class="pub-cite"><span class="jrnl">Function (Oxf)</span> &middot; 2022 &middot; 3(4):zqac032</p>
+        <p class="pub-links"><a href="https://doi.org/10.1093/function/zqac032" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/35859580/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9279110/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2016</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span></p>
+        <h3 class="pub-title">Are Resistance Training-Mediated Decreases in Ultrasound Echo Intensity Caused by Changes in Muscle Composition, or Is There an Alternative Explanation?</h3>
+        <p class="pub-cite"><span class="jrnl">Ultrasound Med Biol</span> &middot; 2016 &middot; 42(12):3050-3051</p>
+        <p class="pub-links"><a href="https://doi.org/10.1016/j.ultrasmedbio.2016.07.011" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27590097/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+    <div class="year">
+      <p class="year-label">2015</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Housh TJ, Bergstrom HC, Cochrane KC, Hill EC, Smith CM, Johnson GO, Schmidt RJ, Cramer JT</p>
+        <h3 class="pub-title">Basic reporting and interpretation of surface EMG amplitude and mean power frequency: a reply to Vitgotsky, Ogborn, and Phillips</h3>
+        <p class="pub-cite"><span class="jrnl">Eur J Appl Physiol</span> &middot; 2015 &middot; 116(3):659-61</p>
+        <p class="pub-links"><a href="https://doi.org/10.1007/s00421-015-3315-5" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/26705244/" rel="noopener">pubmed</a></p>
+      </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="group" id="preprint">
+    <div class="group-head">
+      <h2 class="group-title">Preprints</h2>
+      <p class="group-blurb">Posted but not yet peer reviewed.</p>
+      <p class="group-count">1</p>
+    </div>
+<div class="year">
+      <p class="year-label">2026</p>
+      <ul class="pub-list">
+      <li class="pub">
+        <p class="pub-authors"><span class="pi" title="Principal investigator">Jenkins NDM</span>, Robinson AT, Hornikel B, Whitaker KM, Jacobs DR, Kershaw K, Pettee Gabriel K</p>
+        <h3 class="pub-title">Adverse childhood family environment is associated with altered cardiovascular regulation during exercise among young adults in the Coronary Artery Risk Development in Young Adults (CARDIA) Study</h3>
+        <p class="pub-cite"><span class="jrnl">medRxiv</span> &middot; 2026</p>
+        <p class="pub-links"><a href="https://doi.org/10.64898/2026.04.24.26351696" rel="noopener">doi</a> <a href="https://pubmed.ncbi.nlm.nih.gov/42094154/" rel="noopener">pubmed</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13142581/" rel="noopener">full text</a></p>
+      </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <p class="foot-name">Vascular Stress Physiology and Resilience Laboratory</p>
+    <p class="foot-meta">
+      Department of Kinesiology &middot; University of Wisconsin&ndash;Madison<br>
+      Bardeen / SMI &middot; 1300 University Ave, Madison, WI 53706<br>
+      <a href="mailto:VSPRLab@wisc.edu">VSPRLab@wisc.edu</a>
+    </p>
+  </div>
+  <img class="foot-mark" src="Media/VSPR Monogram (transparent).png" alt="">
+</footer>
+
+</body>
+</html>

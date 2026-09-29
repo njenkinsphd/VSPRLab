@@ -1,0 +1,4 @@
+# PMIDs that must never appear on the site, whatever the query returns.
+# One per line, with a note. Lines starting with # are ignored.
+
+8063430   # 1994 Cryptococcus neoformans paper by a different N.D. Jenkins

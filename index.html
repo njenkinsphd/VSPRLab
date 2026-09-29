@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VSPR Lab · Vascular Stress Physiology and Resilience Laboratory</title>
+<meta name="description" content="The Vascular Stress Physiology and Resilience Laboratory at the University of Wisconsin–Madison studies how psychosocial and lifestyle exposures program vascular, metabolic, and physiological responses across the lifespan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette sampled directly from the VSPR monogram */
+  --paper:#F8F8F8;
+  --paper-deep:#EFEFF0;
+  --ink:#1D1C1F;
+  --slate:#6B6A70;
+  --crimson:#B50811;
+  --crimson-deep:#7A0309;
+  --crimson-lift:#F07164;
+  --gold:#BF9B54;
+  --gold-soft:rgba(191,155,84,.28);
+
+  --display:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --gutter:clamp(20px,5vw,84px);
+  --rule:1px solid rgba(29,28,31,.13);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+/* ---------- placeholder marking ---------- */
+.ph{
+  background:linear-gradient(var(--gold-soft),var(--gold-soft));
+  box-shadow:inset 0 -1px 0 var(--gold);
+  padding:0 .18em;
+  border-radius:2px;
+}
+.ph-block{
+  border:1px dashed var(--gold);
+  background:rgba(191,155,84,.07);
+  border-radius:3px;
+  padding:1.1rem 1.25rem;
+  color:var(--slate);
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:var(--rule);
+  padding:14px var(--gutter);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.masthead-inst{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--slate);
+  margin:0;
+}
+.masthead-inst strong{color:var(--ink);font-weight:700}
+.masthead-tag{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--slate);
+  margin:0;
+}
+
+.sitenav{display:flex;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.sitenav a{color:var(--slate);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent}
+.sitenav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.sitenav a[aria-current="page"]{color:var(--crimson);border-bottom-color:var(--crimson)}
+
+/* gold hairline directly under the masthead */
+.hairline{height:2px;background:var(--gold);opacity:.85}
+
+/* ---------- hero ---------- */
+.hero{
+  padding:clamp(44px,7vw,88px) var(--gutter) clamp(28px,4vw,44px);
+  max-width:1440px;
+  margin:0 auto;
+}
+.hero-mark{width:clamp(200px,26vw,304px);margin-bottom:clamp(30px,4.5vw,54px)}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--crimson);
+  margin:0 0 1.1rem;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+.eyebrow::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:rgba(29,28,31,.16);
+  max-width:220px;
+}
+.headline{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(2.5rem,7.2vw,5.4rem);
+  line-height:.98;
+  letter-spacing:-.035em;
+  margin:0 0 1.4rem;
+  max-width:17ch;
+  text-wrap:balance;
+}
+.headline em{
+  font-style:normal;
+  color:var(--crimson);
+}
+.deck em{font-style:normal;color:var(--crimson);font-weight:600}
+.deck{
+  font-size:clamp(1.06rem,1.9vw,1.3rem);
+  line-height:1.55;
+  color:var(--slate);
+  max-width:56ch;
+  margin:0;
+}
+
+/* ---------- signature: FMD trace ---------- */
+.trace-figure{
+  padding:clamp(24px,4vw,40px) var(--gutter) clamp(40px,6vw,72px);
+  max-width:1440px;
+  margin:0 auto;
+}
+.trace-frame{
+  border-top:var(--rule);
+  border-bottom:var(--rule);
+  padding:clamp(18px,2.6vw,30px) 0 clamp(10px,1.6vw,16px);
+}
+.trace-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:clamp(10px,1.6vw,18px);
+}
+.trace-title{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink);
+  margin:0;
+}
+.trace-unit{
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:.1em;
+  color:var(--slate);
+  margin:0;
+}
+.trace-wrap{position:relative}
+.trace-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
+.trace-fade{position:absolute;top:0;right:0;bottom:0;width:56px;pointer-events:none;
+  background:linear-gradient(to right,rgba(248,248,248,0),var(--paper));opacity:0;transition:opacity .2s}
+.trace-hint{display:none;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);margin:8px 0 0}
+@media (max-width:760px){
+  .trace-fade{opacity:1}
+  .trace-hint{display:block}
+  .eyebrow{flex-wrap:wrap;gap:.4rem}
+  .eyebrow::after{display:none}
+}
+.trace-svg{width:100%;min-width:660px;height:auto;display:block}
+.tr-gate{stroke:var(--gold);stroke-width:1;stroke-dasharray:2 4;opacity:.75}
+
+.tr-line{
+  fill:none;
+  stroke:var(--crimson);
+  stroke-width:2.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:3400;
+  stroke-dashoffset:3400;
+  animation:draw 2.9s cubic-bezier(.22,.61,.36,1) .35s forwards;
+}
+.tr-baseline{stroke:rgba(29,28,31,.22);stroke-width:1;stroke-dasharray:3 5}
+.tr-occl{fill:rgba(29,28,31,.045)}
+.tr-peakline{stroke:var(--gold);stroke-width:1;stroke-dasharray:3 5}
+.tr-dot{
+  fill:var(--crimson);
+  opacity:0;
+  animation:pop .5s ease-out 2.5s forwards;
+}
+.tr-label{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.17em;
+  fill:var(--ink);
+  opacity:0;
+  animation:rise .7s ease-out forwards;
+}
+.tr-sub{
+  font-family:var(--mono);
+  font-size:9.5px;
+  letter-spacing:.1em;
+  fill:var(--slate);
+  opacity:0;
+  animation:rise .7s ease-out forwards;
+}
+.d1{animation-delay:1.0s}
+.d2{animation-delay:1.75s}
+.d3{animation-delay:2.55s}
+
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pop{from{opacity:0}to{opacity:1}}
+
+.trace-caption{
+  font-family:var(--mono);
+  font-size:10.5px;
+  line-height:1.7;
+  letter-spacing:.05em;
+  color:var(--slate);
+  margin:clamp(12px,1.8vw,18px) 0 0;
+  max-width:78ch;
+}
+
+/* ---------- mission ---------- */
+.mission{
+  border-top:var(--rule);
+  background:var(--paper-deep);
+}
+.mission-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:clamp(44px,6.5vw,86px) var(--gutter);
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:clamp(20px,3vw,44px);
+}
+.mission-label{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--crimson);
+  margin:0;
+}
+.mission-body{max-width:min(100%,780px)}
+.mission-lede em{font-style:normal;color:var(--crimson)}
+.mission-lede{
+  font-size:clamp(1.3rem,2.6vw,1.85rem);
+  line-height:1.42;
+  margin:0 0 1.5rem;
+  text-wrap:pretty;
+}
+.mission-p{margin:0 0 1.15rem;color:var(--slate);max-width:62ch}
+.mission-p:last-child{margin-bottom:0}
+
+@media (min-width:900px){
+  .mission-inner{grid-template-columns:200px minmax(0,1fr)}
+}
+
+/* ---------- footer ---------- */
+.foot{
+  border-top:var(--rule);
+  padding:clamp(30px,4vw,48px) var(--gutter);
+  max-width:1440px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  gap:22px;
+  flex-wrap:wrap;
+  align-items:flex-end;
+}
+.foot-name{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:1.02rem;
+  letter-spacing:-.01em;
+  margin:0 0 .3rem;
+}
+.foot-meta a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.foot-meta a:hover{border-bottom-color:var(--crimson)}
+.foot-meta{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--slate);
+  margin:0;
+  line-height:1.9;
+}
+.foot-mark{width:118px;opacity:.5}
+
+:where(a,button):focus-visible{
+  outline:2px solid var(--crimson);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .tr-line{animation:none;stroke-dashoffset:0}
+  .tr-label,.tr-sub,.tr-dot{animation:none;opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <p class="masthead-inst"><strong>University of Wisconsin–Madison</strong> · Department of Kinesiology</p>
+  <nav class="sitenav">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="people.html">People</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+</header>
+<div class="hairline" role="presentation"></div>
+
+<main>
+  <section class="hero">
+    <img class="hero-mark" src="Media/VSPR Monogram (transparent).png" alt="VSPR Lab · Vascular Stress Physiology and Resilience Laboratory">
+
+    <p class="eyebrow">Principal Investigator · Nathaniel D.M. Jenkins, PhD, FAHA</p>
+
+    <h1 class="headline">Stress leaves a signature in the <em>vasculature</em>.</h1>
+
+    <p class="deck">How do psychosocial and lifestyle exposures program the integrated vascular, metabolic, and physiological responses that determine <em>cardiovascular resilience or vulnerability</em> across the lifespan?</p>
+  </section>
+
+  <figure class="trace-figure">
+    <div class="trace-frame">
+      <div class="trace-head">
+        <p class="trace-title">Brachial artery response to occlusion</p>
+        <p class="trace-unit">Diameter (mm) × time</p>
+      </div>
+
+      <div class="trace-wrap">
+      <div class="trace-scroll">
+      <svg class="trace-svg" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="traceTitle traceDesc">
+        <title id="traceTitle">Flow-mediated dilation trace</title>
+        <desc id="traceDesc">A brachial artery diameter trace across a flow-mediated dilation test: a stable baseline, a period of cuff occlusion labelled stress, a sharp rise to peak dilation labelled response, and a gradual return toward baseline labelled resilience.</desc>
+
+        <!-- occlusion window -->
+        <rect class="tr-occl" x="300" y="34" width="260" height="158"></rect>
+        <line class="tr-gate" x1="300" y1="34" x2="300" y2="192"></line>
+        <line class="tr-gate" x1="560" y1="34" x2="560" y2="192"></line>
+        <!-- baseline reference -->
+        <line class="tr-baseline" x1="0" y1="168" x2="1200" y2="168"></line>
+        <!-- peak reference -->
+        <line class="tr-peakline" x1="0" y1="62" x2="700" y2="62"></line>
+
+        <path class="tr-line" d="M0 168.0C2 168.2,8 169.1,12 169.3C16 169.4,20 169.0,24 168.7C28 168.3,32 167.4,36 167.1C40 166.8,44 166.7,48 166.9C52 167.0,56 167.9,60 168.3C64 168.7,68 169.3,72 169.3C76 169.3,80 168.8,84 168.4C88 168.0,92 167.2,96 166.9C100 166.7,104 166.7,108 167.0C112 167.3,116 168.2,120 168.5C124 168.9,128 169.4,132 169.3C136 169.2,140 168.6,144 168.1C148 167.7,152 166.9,156 166.8C160 166.6,164 166.9,168 167.2C172 167.5,176 168.5,180 168.8C184 169.1,188 169.4,192 169.2C196 169.1,200 168.3,204 167.9C208 167.4,212 166.8,216 166.7C220 166.6,224 167.1,228 167.5C232 167.8,236 168.8,240 169.0C244 169.2,248 168.5,252 168.6C256 168.6,260 168.8,264 169.4C268 169.9,272 171.0,276 171.9C280 172.8,284 174.1,288 174.8C292 175.5,296 175.9,300 176.1C304 176.3,308 176.1,312 176.1C316 176.1,320 176.1,324 176.0C328 176.0,332 176.0,336 176.0C340 176.0,344 176.0,348 176.0C352 176.0,356 176.0,360 176.0C364 176.0,368 175.9,372 175.9C376 175.9,380 175.9,384 175.9C388 175.9,392 175.9,396 175.9C400 175.9,404 175.9,408 175.9C412 175.9,416 175.9,420 175.8C424 175.8,428 175.8,432 175.8C436 175.8,440 175.8,444 175.8C448 175.8,452 175.8,456 175.8C460 175.8,464 175.8,468 175.8C472 175.8,476 175.8,480 175.8C484 175.8,488 175.8,492 175.8C496 175.8,500 175.8,504 175.8C508 175.8,512 175.8,516 175.8C520 175.7,524 175.8,528 175.8C532 175.8,536 175.8,540 175.8C544 175.8,548 175.8,552 175.8C556 175.8,560 176.4,564 175.7C568 175.1,572 173.8,576 171.9C580 169.9,584 167.2,588 164.1C592 161.1,596 157.3,600 153.4C604 149.5,608 145.0,612 140.5C616 136.0,620 131.1,624 126.3C628 121.5,632 116.5,636 111.7C640 106.9,644 102.0,648 97.5C652 93.0,656 88.5,660 84.6C664 80.7,668 76.9,672 73.9C676 70.8,680 68.1,684 66.1C688 64.2,692 62.0,696 62.3C700 62.6,704 65.9,708 68.0C712 70.1,716 72.7,720 74.8C724 76.9,728 78.6,732 80.5C736 82.5,740 84.5,744 86.6C748 88.8,752 91.2,756 93.2C760 95.3,764 97.4,768 99.1C772 100.9,776 102.3,780 103.7C784 105.1,788 106.2,792 107.6C796 108.9,800 110.4,804 111.9C808 113.4,812 115.2,816 116.6C820 118.0,824 119.4,828 120.6C832 121.8,836 122.6,840 123.6C844 124.5,848 125.3,852 126.2C856 127.2,860 128.3,864 129.4C868 130.4,872 131.7,876 132.7C880 133.7,884 134.6,888 135.4C892 136.1,896 136.6,900 137.3C904 137.9,908 138.5,912 139.1C916 139.8,920 140.6,924 141.4C928 142.2,932 143.0,936 143.7C940 144.4,944 145.0,948 145.5C952 146.0,956 146.3,960 146.8C964 147.2,968 147.6,972 148.1C976 148.6,980 149.2,984 149.7C988 150.3,992 150.9,996 151.3C1000 151.8,1004 152.2,1008 152.5C1012 152.8,1016 153.0,1020 153.3C1024 153.6,1028 153.9,1032 154.2C1036 154.6,1040 155.1,1044 155.4C1048 155.8,1052 156.2,1056 156.5C1060 156.9,1064 157.1,1068 157.3C1072 157.5,1076 157.6,1080 157.8C1084 158.0,1088 158.2,1092 158.5C1096 158.8,1100 159.1,1104 159.4C1108 159.7,1112 159.9,1116 160.1C1120 160.3,1124 160.5,1128 160.6C1132 160.7,1136 160.8,1140 160.9C1144 161.1,1148 161.3,1152 161.5C1156 161.6,1160 161.9,1164 162.1C1168 162.3,1172 162.5,1176 162.6C1180 162.7,1184 162.8,1188 162.9C1192 163.0,1198 163.1,1200 163.1"></path>
+
+        <circle class="tr-dot" cx="700" cy="62" r="5"></circle>
+
+        <text class="tr-label d1" x="312" y="222">STRESS</text>
+        <text class="tr-sub   d1" x="312" y="240">CUFF OCCLUSION</text>
+
+        <text class="tr-label d2" x="614" y="30">RESPONSE</text>
+        <text class="tr-sub   d2" x="614" y="46">PEAK DILATION</text>
+
+        <text class="tr-label d3" x="900" y="222">RESILIENCE</text>
+        <text class="tr-sub   d3" x="900" y="240">RETURN TO BASELINE</text>
+      </svg>
+        </div>
+        <div class="trace-fade" aria-hidden="true"></div>
+      </div>
+      <p class="trace-hint">Swipe the trace to follow it end to end &rarr;</p>
+    </div>
+
+    <figcaption class="trace-caption">The lab's name, drawn by its own instrument. A flow-mediated dilation test holds an artery under stress and measures how fully it opens in response, then follows it back to baseline.</figcaption>
+  </figure>
+
+  <section class="mission" id="mission">
+    <div class="mission-inner">
+      <p class="mission-label">Mission</p>
+      <div class="mission-body">
+        <p class="mission-lede">The VSPR Lab studies how psychosocial and environmental stressors affect blood vessel health across the lifespan, combining vascular physiology, cellular and mitochondrial biology, and behavioral observation and manipulation to uncover what drives cardiometabolic disease risk in high-risk populations.</p>
+        <p class="mission-p">Sleep, diet, and physical activity are measured as exposures that shape vascular and metabolic function, and manipulated experimentally to test causal mechanisms in humans.</p>
+        <p class="mission-p">Using tools like live-cell imaging and mitochondrial phenotyping, the lab traces how stress and other circulating factors act on endothelial and mitochondrial function. That work connects everyday biological stress to long-term vascular and metabolic disease.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <p class="foot-name">Vascular Stress Physiology and Resilience Laboratory</p>
+    <p class="foot-meta">
+      University of Wisconsin–Madison · Department of Kinesiology<br>
+      Bardeen / SMI &middot; 1300 University Ave, Madison, WI 53706<br>
+      <a href="mailto:VSPRLab@wisc.edu">VSPRLab@wisc.edu</a>
+    </p>
+  </div>
+  <img class="foot-mark" src="Media/VSPR Monogram (transparent).png" alt="">
+</footer>
+
+</body>
+</html>

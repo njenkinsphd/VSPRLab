@@ -1,0 +1,33 @@
+# VSPR Lab trainees and staff, highlighted in blue on the publications page.
+# The PI renders in crimson. A legend on the page explains both.
+#
+# One name per line. Two accepted forms:
+#
+#   Rogers EM            <- exactly as PubMed prints it (most reliable)
+#   Emily Rogers         <- first and last name, initials derived
+#
+# Use the PubMed form for any compound surname, because deriving initials from
+# a full name gets it wrong: PubMed prints "Lima Oliveira M", so writing
+# "Manoela Lima Oliveira" would look for "Oliveira ML" and miss.
+#
+# Matching is surname plus an initials prefix, so "Rogers E" here still matches
+# "Rogers EM" on a paper, and vice versa. That flexibility means a common
+# surname can collide with an unrelated co-author. After editing this file,
+# rebuild and skim the audit the build prints.
+#
+# Lines starting with # are ignored.
+
+# --- Confirmed by Nate, 2026-09-25 ---
+Helwig NJ
+Schwager LE
+Hart TW
+Zucker AC
+Venenga JS
+Flores M
+
+# --- Added earlier from context, still unconfirmed ---
+Rogers EM
+Banks NF
+Lima Oliveira M
+Power G
+West K

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People &middot; VSPR Lab</title>
+<meta name="description" content="People of the Vascular Stress Physiology and Resilience Laboratory at the University of Wisconsin-Madison.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F8F8; --paper-deep:#EFEFF0; --ink:#1D1C1F; --slate:#6B6A70;
+  --crimson:#B50811; --gold:#BF9B54; --blue:#2A5D8F;
+  --display:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --gutter:clamp(20px,5vw,84px);
+  --rule:1px solid rgba(29,28,31,.13);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+
+.masthead{border-bottom:var(--rule);padding:14px var(--gutter);display:flex;
+  align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.masthead-inst{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin:0}
+.masthead-inst strong{color:var(--ink);font-weight:700}
+.sitenav{display:flex;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase}
+.sitenav a{color:var(--slate);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent}
+.sitenav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.sitenav a[aria-current="page"]{color:var(--crimson);border-bottom-color:var(--crimson)}
+.hairline{height:2px;background:var(--gold);opacity:.85}
+
+.pagehead{max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,76px) var(--gutter) clamp(18px,3vw,30px)}
+.pagehead h1{font-family:var(--display);font-weight:800;letter-spacing:-.035em;
+  font-size:clamp(2.4rem,6.5vw,4.6rem);line-height:1;margin:0 0 1rem}
+.pagehead p{color:var(--slate);max-width:60ch;margin:0}
+
+.group{max-width:1440px;margin:0 auto;padding:0 var(--gutter) clamp(30px,5vw,58px)}
+.group-head{border-top:2px solid var(--ink);padding-top:14px;margin-bottom:clamp(18px,3vw,30px)}
+.group-title{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.4vw,1.7rem);
+  letter-spacing:-.02em;margin:0}
+.group-blurb{font-size:.94rem;color:var(--slate);margin:.3rem 0 0;max-width:56ch}
+
+.portrait{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px;
+  background:var(--paper-deep);filter:grayscale(1) contrast(1.02)}
+.person:hover .portrait,.feature:hover .portrait{filter:none}
+.portrait-lg{width:200px;flex:0 0 200px}
+.portrait-blank{display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:700;font-size:1.6rem;color:var(--slate);
+  border:1px dashed var(--gold);filter:none}
+
+.feature{display:flex;gap:clamp(20px,3vw,36px);flex-wrap:wrap;align-items:flex-start}
+.feature-body{flex:1 1 320px;max-width:62ch}
+
+.people-grid{list-style:none;margin:0;padding:0;display:grid;gap:clamp(22px,3vw,36px);
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.person{margin:0}
+
+.person-name{font-family:var(--display);font-weight:700;font-size:1.06rem;
+  letter-spacing:-.015em;margin:.7rem 0 .1rem}
+.person-name .creds{font-family:var(--mono);font-size:.7em;font-weight:500;
+  letter-spacing:.06em;color:var(--slate)}
+.person-role{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--crimson);margin:0 0 .5rem}
+.person-bio{font-size:.95rem;color:var(--slate);margin:0}
+.person-links{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  margin:.55rem 0 0;display:flex;gap:12px;flex-wrap:wrap}
+.person-links a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.person-links a:hover{border-bottom-color:var(--crimson)}
+
+.alum-list{list-style:none;margin:0;padding:0;columns:2;column-gap:clamp(24px,4vw,56px)}
+.alum{break-inside:avoid;padding:.5rem 0;border-bottom:var(--rule)}
+.alum-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.alum-name{font-weight:600}
+.alum-now{font-size:.9rem;color:var(--slate);text-align:right}
+.alum-role{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin:.15rem 0 0}
+@media (max-width:700px){.alum-list{columns:1}}
+
+.foot{border-top:var(--rule);padding:clamp(30px,4vw,48px) var(--gutter);max-width:1440px;
+  margin:0 auto;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;align-items:flex-end}
+.foot-name{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.01em;margin:0 0 .3rem}
+.foot-meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--slate);margin:0;line-height:1.9}
+.foot-meta a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.foot-mark{width:118px;opacity:.5}
+:where(a,button):focus-visible{outline:2px solid var(--crimson);outline-offset:3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <p class="masthead-inst"><strong>University of Wisconsin&ndash;Madison</strong> &middot; Department of Kinesiology</p>
+  <nav class="sitenav">
+    <a href="index.html">Home</a>
+    <a href="people.html" aria-current="page">People</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+</header>
+<div class="hairline" role="presentation"></div>
+
+<main>
+  <div class="pagehead">
+    <h1>People</h1>
+    <p>The Vascular Stress Physiology and Resilience Laboratory.</p>
+  </div>
+
+  <section class="group" id="pi">
+    <div class="group-head">
+      <h2 class="group-title">Principal Investigator</h2>
+    </div>
+      <div class="feature">
+        <img class="portrait portrait-lg" src="Media/Headshot-web.jpg" alt="Nathaniel D. M. Jenkins" loading="lazy">
+        <div class="feature-body">
+          <h3 class="person-name">Nathaniel D. M. Jenkins, <span class="creds">PhD, FAHA</span></h3>
+          <p class="person-role">Associate Professor of Kinesiology</p>
+          <p class="person-bio">[PLACEHOLDER] A short paragraph in your own voice. What you work on, how you got here, what you are looking for in trainees.</p>
+          <p class="person-links"><a href="mailto:VSPRLab@wisc.edu">email</a> <a href="https://orcid.org/0000-0003-1781-3414" rel="noopener">orcid</a></p>
+        </div>
+      </div>
+  </section>
+
+  <section class="group" id="current">
+    <div class="group-head">
+      <h2 class="group-title">Lab members</h2>
+    </div>
+      <ul class="people-grid">
+        <li class="person">
+          <div class="portrait portrait-blank" aria-hidden="true">GP</div>
+          <h3 class="person-name">Gavin Power, <span class="creds">PhD</span></h3>
+          <p class="person-role">Postdoctoral Fellow</p>
+          
+          
+        </li>
+        <li class="person">
+          <div class="portrait portrait-blank" aria-hidden="true">ML</div>
+          <h3 class="person-name">Manoela Lima Oliveira, <span class="creds">PhD</span></h3>
+          <p class="person-role">Postdoctoral Fellow</p>
+          
+          
+        </li>
+        <li class="person">
+          <div class="portrait portrait-blank" aria-hidden="true">LS</div>
+          <h3 class="person-name">Laura Schwager, <span class="creds">BA</span></h3>
+          <p class="person-role">Research Associate</p>
+          
+          
+        </li>
+        <li class="person">
+          <div class="portrait portrait-blank" aria-hidden="true">MF</div>
+          <h3 class="person-name">Mark Flores</h3>
+          <p class="person-role">PhD Candidate</p>
+          
+          
+        </li>
+        <li class="person">
+          <div class="portrait portrait-blank" aria-hidden="true">KW</div>
+          <h3 class="person-name">Kylee West</h3>
+          <p class="person-role">PhD Candidate</p>
+          
+          
+        </li>
+        <li class="person">
+          <div class="portrait portrait-blank" aria-hidden="true">SE</div>
+          <h3 class="person-name">Sequoia Ernst</h3>
+          <p class="person-role">MS Student</p>
+          
+          
+        </li>
+      </ul>
+  </section>
+
+  <section class="group" id="alumni">
+    <div class="group-head">
+      <h2 class="group-title">Alumni</h2>
+      <p class="group-blurb">Where they are now.</p>
+    </div>
+      <ul class="alum-list">
+        <li class="alum"><div class="alum-head"><span class="alum-name">Nile Banks, <span class="creds">PhD</span></span><span class="alum-now">Assistant Professor, Maynooth University, Ireland</span></div><p class="alum-role">PhD 2023, then postdoc with Bill Schrage at UW–Madison</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Emily Rogers, <span class="creds">PhD</span></span><span class="alum-now">Clinical Affairs Lead, Neuromod, Dublin</span></div><p class="alum-role">PhD 2023, then postdoc with Bill Schrage at UW–Madison</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Nathaniel Helwig, <span class="creds">MS</span></span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">MS 2023</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Anna Zucker, <span class="creds">MS</span></span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">MS Student</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Alexander Berry, <span class="creds">BS</span></span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">Research Assistant</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Thomas Hart, Jr</span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">Undergraduate Research Assistant</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Preston Engstrom</span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">Undergraduate Research Assistant</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Isabel Jenness</span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">Undergraduate Research Assistant</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Jacob Venenga</span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">Undergraduate Research Assistant</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Justin Alpers</span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">Undergraduate Research Assistant</p></li>
+        <li class="alum"><div class="alum-head"><span class="alum-name">Sydni Schulte</span><span class="alum-now">[PLACEHOLDER] Where now?</span></div><p class="alum-role">Undergraduate Research Assistant</p></li>
+      </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <p class="foot-name">Vascular Stress Physiology and Resilience Laboratory</p>
+    <p class="foot-meta">
+      Department of Kinesiology &middot; University of Wisconsin&ndash;Madison<br>
+      Bardeen / SMI &middot; 1300 University Ave, Madison, WI 53706<br>
+      <a href="mailto:VSPRLab@wisc.edu">VSPRLab@wisc.edu</a>
+    </p>
+  </div>
+  <img class="foot-mark" src="Media/VSPR Monogram (transparent).png" alt="">
+</footer>
+
+</body>
+</html>

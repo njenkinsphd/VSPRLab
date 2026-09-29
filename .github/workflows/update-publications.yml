@@ -1,0 +1,55 @@
+name: Update publications from PubMed
+
+on:
+  schedule:
+    # 07:12 UTC on the 1st of each month (just past the hour so it isn't
+    # queued behind every other cron job scheduled on :00)
+    - cron: "12 7 1 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch PubMed records
+        env:
+          # Optional. Add a repo secret named NCBI_API_KEY to raise the rate
+          # limit from 3 to 10 requests/second. Works fine without one.
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: python3 scripts/fetch_pubmed.py --out publications.json
+
+      - name: Sanity check the fetch
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open("publications.json", encoding="utf-8"))
+          n = d["count"]
+          print(f"fetched {n} records")
+          # Guard against a bad query or an NCBI hiccup silently gutting the page.
+          if n < 90:
+              sys.exit(f"refusing to publish: only {n} records, expected ~108")
+          PY
+
+      - name: Rebuild publications.html
+        run: python3 scripts/build_publications.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet publications.json publications.html; then
+            echo "No change."
+          else
+            git add publications.json publications.html
+            git commit -m "Update publications from PubMed"
+            git push
+          fi
