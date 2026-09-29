@@ -10,3 +10,5 @@ Media/Headshot.png
 People | Integrative Laboratory of Applied Physiology & Lifestyle Medicine | Health and Human Physio.html
 medline.txt
 *.nbib
+__pycache__/
+*.pyc
