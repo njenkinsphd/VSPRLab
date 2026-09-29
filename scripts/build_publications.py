@@ -340,7 +340,7 @@ img{{max-width:100%;height:auto;display:block}}
       <a href="mailto:VSPRLab@wisc.edu">VSPRLab@wisc.edu</a>
     </p>
   </div>
-  <img class="foot-mark" src="Media/VSPR Monogram (transparent).png" alt="">
+  <img class="foot-mark" src="Media/vspr-monogram.png" alt="">
 </footer>
 
 </body>
