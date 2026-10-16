@@ -238,13 +238,14 @@ a{color:inherit}
 @keyframes pop{from{opacity:0}to{opacity:1}}
 
 .trace-caption{
-  font-family:var(--mono);
-  font-size:10.5px;
-  line-height:1.7;
-  letter-spacing:.05em;
+  /* Was mono at 10.5px, which suited a one-line label. The caption now carries
+     a real paragraph, so it reads in the body face at a readable size. */
+  font-family:var(--body);
+  font-size:.95rem;
+  line-height:1.65;
   color:var(--slate);
   margin:clamp(12px,1.8vw,18px) 0 0;
-  max-width:78ch;
+  max-width:62ch;
 }
 
 /* ---------- mission ---------- */
@@ -391,7 +392,7 @@ a{color:inherit}
       <p class="trace-hint">Swipe the trace to follow it end to end &rarr;</p>
     </div>
 
-    <figcaption class="trace-caption">The lab's name, drawn by its own instrument. A flow-mediated dilation test holds an artery under stress and measures how fully it opens in response, then follows it back to baseline.</figcaption>
+    <figcaption class="trace-caption">Flow-mediated dilation is a central measurement in our lab, and it captures in a few minutes the same principle that guides our broader work. Brief forearm occlusion is followed by a surge in shear stress on the endothelium when the cuff is released, and the artery dilates in response before returning to baseline. Just as the artery responds to this brief challenge and then recovers, we study how stress exposures across the lifespan shape the vasculature&rsquo;s ability to adapt and recover over years and decades.</figcaption>
   </figure>
 
   <section class="mission" id="mission">
