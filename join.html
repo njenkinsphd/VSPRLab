@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the Lab · VSPR Lab</title>
+<meta name="description" content="Openings in the Vascular Stress Physiology and Resilience Laboratory at the University of Wisconsin–Madison, and how to apply.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F8F8;
+  --paper-deep:#EFEFF0;
+  --ink:#1D1C1F;
+  --slate:#6B6A70;
+  --crimson:#B50811;
+  --gold:#BF9B54;
+
+  --display:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --gutter:clamp(20px,5vw,84px);
+  --rule:1px solid rgba(29,28,31,.13);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+.masthead{border-bottom:var(--rule);padding:14px var(--gutter);display:flex;
+  align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.masthead-inst{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin:0}
+.masthead-inst strong{color:var(--ink);font-weight:700}
+.sitenav{display:flex;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.sitenav a{color:var(--slate);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent}
+.sitenav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.sitenav a[aria-current="page"]{color:var(--crimson);border-bottom-color:var(--crimson)}
+.hairline{height:2px;background:var(--gold);opacity:.85}
+
+.pagehead{max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,76px) var(--gutter) clamp(18px,3vw,30px)}
+.pagehead h1{font-family:var(--display);font-weight:800;letter-spacing:-.035em;
+  font-size:clamp(2.4rem,6.5vw,4.6rem);line-height:1;margin:0 0 1rem}
+.pagehead p{color:var(--slate);max-width:62ch;margin:0}
+
+.group{max-width:1440px;margin:0 auto;padding:0 var(--gutter) clamp(30px,5vw,58px)}
+.group-head{border-top:2px solid var(--ink);padding-top:14px;margin-bottom:clamp(18px,3vw,30px)}
+.group-title{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.4vw,1.7rem);
+  letter-spacing:-.02em;margin:0}
+.group-blurb{font-size:.94rem;color:var(--slate);margin:.3rem 0 0;max-width:62ch}
+.prose{max-width:62ch;margin:0 0 1.1rem}
+.prose:last-child{margin-bottom:0}
+.prose a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.prose a:hover{border-bottom-color:var(--crimson)}
+
+/* openings */
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;
+  background:rgba(29,28,31,.13);border:1px solid rgba(29,28,31,.13)}
+.post{background:var(--paper);padding:clamp(18px,2.4vw,28px)}
+.post .tag{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--crimson);display:block;margin:0 0 .55rem}
+.post h3{font-family:var(--display);font-weight:700;font-size:1.22rem;letter-spacing:-.02em;margin:0 0 .6rem}
+.post p{font-size:.96rem;color:var(--slate);margin:0 0 .8rem}
+.post p:last-child{margin-bottom:0}
+
+/* what the work involves */
+.strands{list-style:none;margin:0;padding:0;max-width:72ch}
+.strands li{display:flex;gap:1.2rem;padding:.8rem 0;border-bottom:var(--rule);font-size:.96rem}
+.strands li:first-child{border-top:var(--rule)}
+.strands b{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--slate);flex:0 0 11rem;padding-top:.3rem}
+.strands span{color:var(--ink)}
+@media (max-width:620px){.strands li{flex-direction:column;gap:.2rem}.strands b{flex:none}}
+
+/* steps */
+.steps{list-style:none;counter-reset:step;margin:0;padding:0;max-width:66ch}
+.steps li{counter-increment:step;position:relative;padding:0 0 1.3rem 3.1rem;font-size:.98rem}
+.steps li::before{
+  content:counter(step);position:absolute;left:0;top:.05rem;
+  width:2rem;height:2rem;border:1px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;font-weight:700;color:var(--crimson);
+}
+.steps strong{font-weight:600}
+.steps a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+
+.deadlines{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;
+  background:rgba(29,28,31,.13);border:1px solid rgba(29,28,31,.13);margin:clamp(20px,3vw,30px) 0 0;max-width:700px}
+.deadline{background:var(--paper);padding:clamp(14px,2vw,20px)}
+.deadline dt{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--slate);margin:0 0 .35rem}
+.deadline dd{font-family:var(--display);font-weight:700;font-size:clamp(1.15rem,2.1vw,1.45rem);
+  letter-spacing:-.02em;margin:0;line-height:1.1}
+
+.contact{
+  border:1px solid var(--gold);background:rgba(191,155,84,.08);
+  padding:clamp(20px,3vw,30px);max-width:66ch;
+}
+.contact p{margin:0 0 .8rem}
+.contact p:last-child{margin-bottom:0}
+.contact a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.contact a:hover{border-bottom-color:var(--crimson)}
+
+.foot{border-top:var(--rule);padding:clamp(30px,4vw,48px) var(--gutter);max-width:1440px;
+  margin:0 auto;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;align-items:flex-end}
+.foot-name{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.01em;margin:0 0 .3rem}
+.foot-meta{font-family:var(--mono);font-size:11px;line-height:1.9;letter-spacing:.05em;color:var(--slate);margin:0}
+.foot-meta a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.foot-mark{width:122px;opacity:.9}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <p class="masthead-inst"><strong>University of Wisconsin–Madison</strong> · Department of Kinesiology</p>
+  <nav class="sitenav">
+    <a href="index.html">Home</a>
+    <a href="lab.html">Lab</a>
+    <a href="people.html">People</a>
+    <a href="publications.html">Publications</a>
+    <a href="join.html" aria-current="page">Join</a>
+  </nav>
+</header>
+<div class="hairline" role="presentation"></div>
+
+<main>
+  <div class="pagehead">
+    <h1>Join the Lab</h1>
+    <p>The VSPR Lab is building out at UW&ndash;Madison and is recruiting at the postdoctoral and graduate level. If the work below is the work you want to do, write to me.</p>
+  </div>
+
+  <section class="group" id="openings">
+    <div class="group-head">
+      <h2 class="group-title">Open positions</h2>
+    </div>
+
+    <div class="posts">
+      <div class="post">
+        <span class="tag">Open</span>
+        <h3>Postdoctoral Fellow</h3>
+        <p>For someone who wants to work at the join between human vascular physiology and cellular bioenergetics, rather than only one of them. Projects run from flow-mediated dilation and cardiovascular stress testing in people through to serum co-culture, live-cell imaging, and mitochondrial phenotyping at the bench.</p>
+        <p>Strong candidates bringing their own fellowship funding are encouraged to get in touch early, since those applications take time to build properly.</p>
+      </div>
+
+      <div class="post">
+        <span class="tag">Open</span>
+        <h3>PhD or MS Student</h3>
+        <p>Through the Department of Kinesiology graduate program. Students in the lab learn human vascular measurement, behavioral assessment and manipulation, and bench work, and are expected to carry a project of their own.</p>
+        <p>Email me before you apply. The application asks you to name an area of specialization and a potential advisor, and a short conversation first makes both of those easier.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="group" id="work">
+    <div class="group-head">
+      <h2 class="group-title">What the work involves</h2>
+      <p class="group-blurb">Most projects in the lab touch more than one of these.</p>
+    </div>
+
+    <ul class="strands">
+      <li><b>Human physiology</b><span>Vascular endothelial function, blood pressure, and the cardiovascular response to acute stress and to exercise, measured in two clinical research bays.</span></li>
+      <li><b>Behavior</b><span>Sleep, diet, and physical activity, measured as everyday exposures and manipulated experimentally to test causal mechanisms.</span></li>
+      <li><b>Sample work</b><span>Blood processing, point-of-care analyses, and ELISAs in the lab's own wet lab, beside the testing bays.</span></li>
+      <li><b>Cells and mitochondria</b><span>Cell culture, live-cell imaging, and bioenergetic phenotyping in the shared cell laboratory in Bardeen 280.</span></li>
+      <li><b>Cohort analysis</b><span>Work in existing cohorts alongside the lab's own studies, where the question needs a longer time horizon than a single experiment allows.</span></li>
+    </ul>
+  </section>
+
+  <section class="group" id="apply">
+    <div class="group-head">
+      <h2 class="group-title">Applying to the graduate program</h2>
+      <p class="group-blurb">Research-based MS and PhD, Department of Kinesiology.</p>
+    </div>
+
+    <ol class="steps">
+      <li><strong>Email me first.</strong> A paragraph on what you want to study and why this lab, plus your CV. This matters more than it sounds like it does, because I can tell you whether I am taking a student in the cycle you are applying to before you spend money on an application.</li>
+      <li><strong>Apply through the UW Graduate School</strong> and name <strong>Exercise Physiology</strong> as your area of specialization. The departmental instructions are on the <a href="https://kinesiology.education.wisc.edu/graduate-admissions/kinesiology-graduate-admissions/apply-ms-phd-program/" rel="noopener">Kinesiology admissions page</a>.</li>
+      <li><strong>Send a personal statement of one to two pages</strong>, three letters of recommendation submitted online, and unofficial transcripts. International applicants whose instruction was not in English also submit proof of English proficiency.</li>
+    </ol>
+
+    <dl class="deadlines">
+      <div class="deadline"><dt>Fall admission</dt><dd>December 1</dd></div>
+      <div class="deadline"><dt>Spring admission</dt><dd>September 1</dd></div>
+      <div class="deadline"><dt>Summer</dt><dd>No admission</dd></div>
+    </dl>
+  </section>
+
+  <section class="group" id="contact">
+    <div class="group-head">
+      <h2 class="group-title">Getting in touch</h2>
+    </div>
+
+    <div class="contact">
+      <p>Write to <a href="mailto:njenkins5@wisc.edu">njenkins5@wisc.edu</a> with your CV and a short note on what you want to work on.</p>
+      <p>Tell me what question you are actually interested in rather than what you think I want to hear. A specific interest I cannot support is more useful to both of us than a general one I can.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <p class="foot-name">Vascular Stress Physiology and Resilience Laboratory</p>
+    <p class="foot-meta">
+      University of Wisconsin–Madison · Department of Kinesiology<br>
+      Service Memorial Institute &middot; 470 N. Charter St, Madison, WI 53706<br>
+      <a href="mailto:VSPRLab@wisc.edu">VSPRLab@wisc.edu</a>
+    </p>
+  </div>
+  <img class="foot-mark" src="Media/vspr-monogram.png" alt="">
+</footer>
+
+</body>
+</html>

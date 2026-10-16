@@ -243,6 +243,7 @@ img{max-width:100%;height:auto;display:block}
     <a href="lab.html">Lab</a>
     <a href="people.html" aria-current="page">People</a>
     <a href="publications.html">Publications</a>
+    <a href="join.html">Join</a>
   </nav>
 </header>
 <div class="hairline" role="presentation"></div>
