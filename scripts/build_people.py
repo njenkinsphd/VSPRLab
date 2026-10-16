@@ -88,6 +88,22 @@ def compact_row(p):
     return '<li class="alum">%s%s</li>' % (head, sub)
 
 
+def strip_placeholders(node):
+    """Drop any field still holding scaffold text.
+
+    A field reading "[PLACEHOLDER] ..." is a note to ourselves, not content.
+    Removing it lets the templates fall back to their empty-field behaviour,
+    so an unfinished bio or an unknown alumni destination simply does not
+    render instead of announcing itself on a live page.
+    """
+    if isinstance(node, dict):
+        return {k: strip_placeholders(v) for k, v in node.items()
+                if not (isinstance(v, str) and v.lstrip().startswith("[PLACEHOLDER]"))}
+    if isinstance(node, list):
+        return [strip_placeholders(v) for v in node]
+    return node
+
+
 def build(data):
     blocks = []
     for g in data["groups"]:
@@ -253,7 +269,7 @@ def main():
     ap.add_argument("--data", default="people.json")
     ap.add_argument("--out", default="people.html")
     args = ap.parse_args()
-    data = json.loads(Path(args.data).read_text(encoding="utf-8"))
+    data = strip_placeholders(json.loads(Path(args.data).read_text(encoding="utf-8")))
     Path(args.out).write_text(build(data), encoding="utf-8")
     n = sum(len(g.get("people") or []) for g in data["groups"])
     print("wrote %s with %d people" % (args.out, n))

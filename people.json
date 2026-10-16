@@ -92,7 +92,7 @@
     {
       "id": "alumni",
       "title": "Alumni",
-      "blurb": "Where they are now.",
+      "blurb": "Former members of the lab.",
       "feature": false,
       "compact": true,
       "people": [
