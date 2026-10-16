@@ -1,8 +1,8 @@
 {
   "source": "PubMed",
   "query": "Jenkins NDM[Author]",
-  "generated": "2026-09-25",
-  "count": 108,
+  "generated": "2026-10-16",
+  "count": 113,
   "records": [
     {
       "pmid": "42094154",
@@ -132,6 +132,28 @@
       "article_types": [
         "Journal Article",
         "Comment"
+      ]
+    },
+    {
+      "pmid": "41566566",
+      "doi": "10.1097/JSM.0000000000001399",
+      "pmc": null,
+      "title": "Hyperlactation and Sport Performance in an Elite Marathon Runner",
+      "authors": [
+        "McLachlan ML",
+        "Slayman TG",
+        "Jenkins ND",
+        "Woodroffe LM"
+      ],
+      "journal": "Clin J Sport Med",
+      "year": 2026,
+      "volume": "36",
+      "issue": "4",
+      "pages": "e121-e124",
+      "group": "article",
+      "article_types": [
+        "Journal Article",
+        "Case Reports"
       ]
     },
     {
@@ -810,6 +832,32 @@
       "group": "article",
       "article_types": [
         "Journal Article"
+      ]
+    },
+    {
+      "pmid": "36332719",
+      "doi": "10.1053/j.ajkd.2022.08.028",
+      "pmc": "PMC9974577",
+      "title": "Intensive Care Unit-Acquired Weakness in Patients With Acute Kidney Injury: A Contemporary Review",
+      "authors": [
+        "Teixeira JP",
+        "Mayer KP",
+        "Griffin BR",
+        "George N",
+        "Jenkins N",
+        "Pal CA",
+        "González-Seguel F",
+        "Neyra JA"
+      ],
+      "journal": "Am J Kidney Dis",
+      "year": 2022,
+      "volume": "81",
+      "issue": "3",
+      "pages": "336-351",
+      "group": "review",
+      "article_types": [
+        "Journal Article",
+        "Review"
       ]
     },
     {
@@ -1519,6 +1567,29 @@
       ]
     },
     {
+      "pmid": "30479636",
+      "doi": "10.1177/1742271X18780127",
+      "pmc": "PMC6243455",
+      "title": "Reliability and differences in quadriceps femoris muscle morphology using ultrasonography: The effects of body position and rest time",
+      "authors": [
+        "Tomko PM",
+        "Muddle TW",
+        "Magrini MA",
+        "Colquhoun RJ",
+        "Luera MJ",
+        "Jenkins ND"
+      ],
+      "journal": "Ultrasound",
+      "year": 2018,
+      "volume": "26",
+      "issue": "4",
+      "pages": "214-221",
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
       "pmid": "28248750",
       "doi": "10.1519/JSC.0000000000001769",
       "pmc": null,
@@ -2032,6 +2103,35 @@
       "group": "article",
       "article_types": [
         "Journal Article"
+      ]
+    },
+    {
+      "pmid": "27282457",
+      "doi": null,
+      "pmc": "PMC5114356",
+      "title": "Four weeks of high- versus low-load resistance training to failure on the rate of torque development, electromechanical delay, and contractile twitch properties",
+      "authors": [
+        "Jenkins ND",
+        "Housh TJ",
+        "Buckner SL",
+        "Bergstrom HC",
+        "Smith CM",
+        "Cochrane KC",
+        "Hill EC",
+        "Miramonti AA",
+        "Schmidt RJ",
+        "Johnson GO",
+        "Cramer JT"
+      ],
+      "journal": "J Musculoskelet Neuronal Interact",
+      "year": 2016,
+      "volume": "16",
+      "issue": "2",
+      "pages": "135-44",
+      "group": "article",
+      "article_types": [
+        "Journal Article",
+        "Randomized Controlled Trial"
       ]
     },
     {
@@ -2654,6 +2754,32 @@
       "group": "article",
       "article_types": [
         "Comparative Study",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "23875823",
+      "doi": "10.1186/1550-2783-10-33",
+      "pmc": "PMC3723652",
+      "title": "The effects of anatabine on non-invasive indicators of muscle damage: a randomized, double-blind, placebo-controlled, crossover study",
+      "authors": [
+        "Jenkins ND",
+        "Housh TJ",
+        "Johnson GO",
+        "Traylor DA",
+        "Bergstrom HC",
+        "Cochrane KC",
+        "Lewis RW",
+        "Schmidt RJ",
+        "Cramer JT"
+      ],
+      "journal": "J Int Soc Sports Nutr",
+      "year": 2013,
+      "volume": "10",
+      "issue": null,
+      "pages": "33",
+      "group": "article",
+      "article_types": [
         "Journal Article"
       ]
     },

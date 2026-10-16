@@ -1,0 +1,9 @@
+# PMIDs that must ALWAYS appear, whatever the author query returns.
+# PubMed filed Nate as "Jenkins N" or "Jenkins ND" on these, so the strict
+# "Jenkins NDM[Author]" query misses them. One per line, # comments ignored.
+
+41566566   # Hyperlactation and sport performance in an elite marathon runner (Clin J Sport Med 2026)
+36332719   # ICU-acquired weakness in AKI, a contemporary review (Am J Kidney Dis 2022)
+30479636   # Quadriceps morphology by ultrasonography, body position and rest (Ultrasound 2018)
+27282457   # Four weeks of high- vs low-load resistance training to failure (J Musculoskelet Neuronal Interact 2016)
+23875823   # Anatabine and non-invasive indicators of muscle damage (J Int Soc Sports Nutr 2013)

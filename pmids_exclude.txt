@@ -2,3 +2,14 @@
 # One per line, with a note. Lines starting with # are ignored.
 
 8063430   # 1994 Cryptococcus neoformans paper by a different N.D. Jenkins
+
+# Natalie D. Jenkins (Edinburgh / Glasgow, dementia and frailty epidemiology).
+# A different person. Listed here so a looser query can never pull her in.
+40490274   # Intimate partner violence, TBI and midlife mental health
+36703138   # Frailty trajectories prior to death, SHARE
+37357296   # CSF Alzheimer's biomarkers and the LIBRA index
+35183146   # Attitudes to mental health data sharing
+35233470   # Trajectories of frailty with aging
+32485739   # Systematic review of frailty trajectories
+30380129   # Systematic review of pulmonary function and cognition
+4800769    # 1973 JAMA letter on heparin standards, another N.D. Jenkins
