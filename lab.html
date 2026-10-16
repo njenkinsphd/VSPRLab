@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lab · VSPR Lab</title>
+<meta name="description" content="The VSPR Lab's physical space at the University of Wisconsin–Madison. Two adjoining suites on the second floor of the Service Memorial Institute, currently under renovation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F8F8;
+  --paper-deep:#EFEFF0;
+  --ink:#1D1C1F;
+  --slate:#6B6A70;
+  --crimson:#B50811;
+  --crimson-deep:#7A0309;
+  --gold:#BF9B54;
+  --gold-soft:rgba(191,155,84,.28);
+
+  --display:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --gutter:clamp(20px,5vw,84px);
+  --rule:1px solid rgba(29,28,31,.13);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:var(--rule);
+  padding:14px var(--gutter);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;flex-wrap:wrap;
+}
+.masthead-inst{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin:0;
+}
+.masthead-inst strong{color:var(--ink);font-weight:700}
+.sitenav{display:flex;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.sitenav a{color:var(--slate);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent}
+.sitenav a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.sitenav a[aria-current="page"]{color:var(--crimson);border-bottom-color:var(--crimson)}
+.hairline{height:2px;background:var(--gold);opacity:.85}
+
+/* ---------- page head ---------- */
+.pagehead{max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,76px) var(--gutter) clamp(18px,3vw,30px)}
+.pagehead h1{font-family:var(--display);font-weight:800;letter-spacing:-.035em;
+  font-size:clamp(2.4rem,6.5vw,4.6rem);line-height:1;margin:0 0 1rem}
+.pagehead p{color:var(--slate);max-width:62ch;margin:0}
+
+.status{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--crimson);
+  border:1px solid var(--gold);background:rgba(191,155,84,.09);
+  border-radius:2px;padding:.4rem .7rem;margin:0 0 1.3rem;
+}
+.status::before{
+  content:"";width:7px;height:7px;border-radius:50%;
+  background:var(--crimson);flex:0 0 7px;
+}
+
+/* ---------- sections ---------- */
+.group{max-width:1440px;margin:0 auto;padding:0 var(--gutter) clamp(30px,5vw,58px)}
+.group-head{border-top:2px solid var(--ink);padding-top:14px;margin-bottom:clamp(18px,3vw,30px)}
+.group-title{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.4vw,1.7rem);
+  letter-spacing:-.02em;margin:0}
+.group-blurb{font-size:.94rem;color:var(--slate);margin:.3rem 0 0;max-width:62ch}
+.prose{max-width:62ch;margin:0 0 1.1rem}
+.prose:last-child{margin-bottom:0}
+
+/* ---------- facts ---------- */
+.facts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:rgba(29,28,31,.13);border:1px solid rgba(29,28,31,.13);
+  margin-top:clamp(20px,3vw,32px);
+}
+.fact{background:var(--paper);padding:clamp(14px,2vw,20px)}
+.fact dt{
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--slate);margin:0 0 .35rem;
+}
+.fact dd{
+  font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.3vw,1.6rem);
+  letter-spacing:-.02em;margin:0;line-height:1.1;
+}
+.fact dd span{font-size:.62em;font-weight:600;color:var(--slate);letter-spacing:0}
+
+/* ---------- plan ---------- */
+.plan-scroll{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.plan-inner{min-width:720px}
+.plan-hint{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--slate);margin:.5rem 0 0;
+}
+@media (min-width:860px){.plan-hint{display:none}}
+
+.room rect{fill:var(--paper-deep);stroke:var(--ink);stroke-width:1.6;transition:fill .15s}
+.room:hover rect,.room:focus-visible rect{fill:rgba(191,155,84,.22)}
+.room text{pointer-events:none}
+.rm-name{font-family:var(--display);font-size:14px;font-weight:700;fill:var(--ink);letter-spacing:-.01em}
+.rm-num{font-family:var(--mono);font-size:10px;font-weight:700;fill:var(--crimson);letter-spacing:.1em}
+.rm-note{font-family:var(--mono);font-size:9px;fill:var(--slate);letter-spacing:.08em}
+.suite-tag{font-family:var(--mono);font-size:10px;font-weight:700;fill:var(--slate);letter-spacing:.18em}
+.corridor rect{fill:none;stroke:rgba(29,28,31,.3);stroke-width:1;stroke-dasharray:5 4}
+.corridor text{font-family:var(--mono);font-size:10px;fill:var(--slate);letter-spacing:.16em}
+.acoustic{stroke:var(--gold);stroke-width:5;stroke-linecap:square}
+
+.legend{
+  display:flex;flex-wrap:wrap;gap:1.4rem 2rem;margin:1.2rem 0 0;padding:0;list-style:none;
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);
+}
+.legend li{display:flex;align-items:center;gap:.55rem}
+.legend i{display:block;width:26px;height:5px;background:var(--gold);flex:0 0 26px}
+.legend i.box{height:13px;background:var(--paper-deep);border:1.4px solid var(--ink);width:20px;flex-basis:20px}
+
+/* ---------- rooms ---------- */
+.rooms{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1px;
+  background:rgba(29,28,31,.13);border:1px solid rgba(29,28,31,.13)}
+.room-card{background:var(--paper);padding:clamp(16px,2.2vw,24px);scroll-margin-top:90px}
+.room-card:target{background:rgba(191,155,84,.12)}
+.room-card h3{
+  font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:-.015em;
+  margin:0 0 .15rem;
+}
+.room-card .num{
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--crimson);display:block;margin:0 0 .5rem;
+}
+.room-card p{font-size:.95rem;color:var(--slate);margin:0}
+
+/* ---------- detail list ---------- */
+.specs{list-style:none;margin:0;padding:0;max-width:72ch}
+.specs li{
+  display:flex;gap:1.2rem;padding:.75rem 0;border-bottom:var(--rule);
+  font-size:.95rem;
+}
+.specs li:first-child{border-top:var(--rule)}
+.specs b{
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--slate);flex:0 0 11rem;padding-top:.28rem;
+}
+.specs span{color:var(--ink)}
+@media (max-width:620px){
+  .specs li{flex-direction:column;gap:.2rem}
+  .specs b{flex:none}
+}
+
+.source{
+  font-family:var(--mono);font-size:10.5px;line-height:1.75;letter-spacing:.04em;
+  color:var(--slate);max-width:72ch;margin:clamp(22px,3vw,34px) 0 0;
+}
+
+/* ---------- footer ---------- */
+.foot{
+  border-top:var(--rule);padding:clamp(30px,4vw,48px) var(--gutter);
+  max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;
+  gap:22px;flex-wrap:wrap;align-items:flex-end;
+}
+.foot-name{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.01em;margin:0 0 .3rem}
+.foot-meta{font-family:var(--mono);font-size:11px;line-height:1.9;letter-spacing:.05em;color:var(--slate);margin:0}
+.foot-meta a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
+.foot-meta a:hover{border-bottom-color:var(--crimson)}
+.foot-mark{width:122px;opacity:.9}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <p class="masthead-inst"><strong>University of Wisconsin–Madison</strong> · Department of Kinesiology</p>
+  <nav class="sitenav">
+    <a href="index.html">Home</a>
+    <a href="lab.html" aria-current="page">Lab</a>
+    <a href="people.html">People</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+</header>
+<div class="hairline" role="presentation"></div>
+
+<main>
+  <div class="pagehead">
+    <p class="status">Under construction</p>
+    <h1>The Lab</h1>
+    <p>Two adjoining suites on the second floor of the Service Memorial Institute, being rebuilt as one working unit for human vascular studies and cell work.</p>
+  </div>
+
+  <section class="group" id="space">
+    <div class="group-head">
+      <h2 class="group-title">The space</h2>
+    </div>
+
+    <p class="prose">The VSPR Lab occupies two adjoining suites at 470 North Charter Street, in a building that opened in 1926 and still carries its original concrete structure overhead. The remodel takes roughly 1,100 square feet of older laboratory space and rebuilds it as eight connected rooms.</p>
+
+    <p class="prose">The arrangement follows the way a study visit actually runs. A participant arrives from the corridor, changes in a private room, and is tested in one of two clinical research bays. Blood and cell samples move a few steps down an internal passage to the wet lab rather than across a building. Consent and interviews happen in their own room, away from the equipment and the noise.</p>
+
+    <p class="prose">One wall is doing something specific. Clinical Research Bay 2 sits behind a sound-rated partition, so a vascular measurement in one bay is not disturbed by whatever is happening in the rest of the suite.</p>
+
+    <dl class="facts">
+      <div class="fact"><dt>Project area</dt><dd>1,137 <span>sq ft</span></dd></div>
+      <div class="fact"><dt>Rooms</dt><dd>8</dd></div>
+      <div class="fact"><dt>Clinical bays</dt><dd>2</dd></div>
+      <div class="fact"><dt>Building</dt><dd>1926</dd></div>
+    </dl>
+  </section>
+
+  <section class="group" id="plan">
+    <div class="group-head">
+      <h2 class="group-title">Plan</h2>
+      <p class="group-blurb">Schematic, not to scale. Select a room to jump to its description.</p>
+    </div>
+
+    <div class="plan-scroll">
+      <div class="plan-inner">
+        <svg viewBox="0 0 1120 408" role="img" aria-label="Schematic floor plan of the VSPR Lab showing eight rooms across two suites, with a corridor along the south side." style="width:100%;height:auto">
+
+          <!-- suite tags -->
+          <text class="suite-tag" x="40" y="22">SUITE 224</text>
+          <text class="suite-tag" x="680" y="22">SUITE 220</text>
+
+          <!-- 224 · Wet Lab -->
+          <a class="room" href="#r224">
+            <rect x="40" y="30" width="260" height="300"/>
+            <text class="rm-num" x="58" y="56">224</text>
+            <text class="rm-name" x="58" y="78">Wet Lab</text>
+            <text class="rm-note" x="58" y="98">BIOSAFETY CABINET · SINKS</text>
+            <text class="rm-note" x="58" y="112">PURIFIED WATER · COLD STORAGE</text>
+          </a>
+
+          <!-- 224B · Storage -->
+          <a class="room" href="#r224b">
+            <rect x="300" y="30" width="120" height="120"/>
+            <text class="rm-num" x="314" y="56">224B</text>
+            <text class="rm-name" x="314" y="78" font-size="12">Storage</text>
+          </a>
+
+          <!-- 224D · Changing Room -->
+          <a class="room" href="#r224d">
+            <rect x="420" y="30" width="130" height="120"/>
+            <text class="rm-num" x="434" y="56">224D</text>
+            <text class="rm-name" x="434" y="78" font-size="12">Changing</text>
+            <text class="rm-name" x="434" y="94" font-size="12">Room</text>
+          </a>
+
+          <!-- 224C · Passage -->
+          <a class="room" href="#r224c">
+            <rect x="550" y="30" width="130" height="120"/>
+            <text class="rm-num" x="564" y="56">224C</text>
+            <text class="rm-name" x="564" y="78" font-size="12">Passage</text>
+            <text class="rm-note" x="564" y="96">LOCKERS</text>
+            <!-- locker run -->
+            <g stroke="#6B6A70" stroke-width="1.2">
+              <line x1="564" y1="118" x2="564" y2="138"/>
+              <line x1="582" y1="118" x2="582" y2="138"/>
+              <line x1="600" y1="118" x2="600" y2="138"/>
+              <line x1="618" y1="118" x2="618" y2="138"/>
+              <line x1="636" y1="118" x2="636" y2="138"/>
+              <line x1="654" y1="118" x2="654" y2="138"/>
+              <line x1="564" y1="118" x2="654" y2="118"/>
+              <line x1="564" y1="138" x2="654" y2="138"/>
+            </g>
+          </a>
+
+          <!-- 224A · Clinical Research Bay 2 -->
+          <a class="room" href="#r224a">
+            <rect x="300" y="150" width="380" height="180"/>
+            <text class="rm-num" x="318" y="178">224A</text>
+            <text class="rm-name" x="318" y="200">Clinical Research Bay 2</text>
+            <text class="rm-note" x="318" y="220">SOUND-ISOLATED</text>
+          </a>
+          <!-- sound-rated partition -->
+          <line class="acoustic" x1="300" y1="150" x2="680" y2="150"/>
+
+          <!-- 220 · Lab -->
+          <a class="room" href="#r220">
+            <rect x="680" y="30" width="190" height="300"/>
+            <text class="rm-num" x="696" y="56">220</text>
+            <text class="rm-name" x="696" y="78">Lab</text>
+            <text class="rm-note" x="696" y="98">SHARED WORKSPACE</text>
+          </a>
+
+          <!-- 220B · Interview -->
+          <a class="room" href="#r220b">
+            <rect x="870" y="30" width="210" height="145"/>
+            <text class="rm-num" x="886" y="56">220B</text>
+            <text class="rm-name" x="886" y="78">Interview Room</text>
+          </a>
+
+          <!-- 220A · Clinical Research Bay 1 -->
+          <a class="room" href="#r220a">
+            <rect x="870" y="175" width="210" height="155"/>
+            <text class="rm-num" x="886" y="203">220A</text>
+            <text class="rm-name" x="886" y="225">Clinical Research</text>
+            <text class="rm-name" x="886" y="243">Bay 1</text>
+          </a>
+
+          <!-- corridor -->
+          <g class="corridor">
+            <rect x="40" y="344" width="1040" height="44"/>
+            <text x="58" y="371">CORRIDOR</text>
+          </g>
+
+          <!-- north arrow -->
+          <g stroke="#6B6A70" stroke-width="1.3" fill="none">
+            <line x1="1058" y1="388" x2="1058" y2="356"/>
+            <polyline points="1050,364 1058,356 1066,364"/>
+          </g>
+          <text class="rm-note" x="1048" y="402" fill="#6B6A70">N</text>
+        </svg>
+      </div>
+    </div>
+    <p class="plan-hint">Scroll the plan sideways to see both suites &rarr;</p>
+
+    <ul class="legend">
+      <li><i class="box"></i> Room</li>
+      <li><i></i> Sound-rated partition</li>
+    </ul>
+  </section>
+
+  <section class="group" id="rooms">
+    <div class="group-head">
+      <h2 class="group-title">Room by room</h2>
+    </div>
+
+    <div class="rooms">
+      <div class="room-card" id="r224">
+        <span class="num">224</span>
+        <h3>Wet Lab</h3>
+        <p>Bench space for the cellular and mitochondrial work. A four-foot biosafety cabinet with UV, two undermount sinks, purified water at the bench, an emergency eye wash, a glassware drying rack, and refrigerated storage.</p>
+      </div>
+
+      <div class="room-card" id="r224a">
+        <span class="num">224A</span>
+        <h3>Clinical Research Bay 2</h3>
+        <p>The second testing bay, built behind a sound-rated partition so a measurement here is not disturbed by work elsewhere in the suite. Wall-mounted display, privacy curtain, and a changing room immediately next door.</p>
+      </div>
+
+      <div class="room-card" id="r224b">
+        <span class="num">224B</span>
+        <h3>Storage</h3>
+        <p>Consumables, supplies, and equipment carts, kept out of the testing and bench areas.</p>
+      </div>
+
+      <div class="room-card" id="r224c">
+        <span class="num">224C</span>
+        <h3>Passage</h3>
+        <p>The internal connection between the wet lab and the clinical side, lined with participant lockers and a bench. Samples and people move between the two halves of the lab without going back out to the corridor.</p>
+      </div>
+
+      <div class="room-card" id="r224d">
+        <span class="num">224D</span>
+        <h3>Changing Room</h3>
+        <p>A private place to change before a visit, with a bench, hooks, lockers, and a pocket door that opens straight into Bay 2.</p>
+      </div>
+
+      <div class="room-card" id="r220">
+        <span class="num">220</span>
+        <h3>Lab</h3>
+        <p>The shared working room. Adjustable-height desks, monitors, a sink and casework run, and a glassboard for working through an analysis with whoever is in the room.</p>
+      </div>
+
+      <div class="room-card" id="r220a">
+        <span class="num">220A</span>
+        <h3>Clinical Research Bay 1</h3>
+        <p>The primary testing bay. A patient chair, a monitor on a wall mount, blackout shades, an accessible sink, and a ceiling-tracked privacy curtain.</p>
+      </div>
+
+      <div class="room-card" id="r220b">
+        <span class="num">220B</span>
+        <h3>Interview Room</h3>
+        <p>Where consent, questionnaires, and interviews happen, away from the equipment. A conference table, seating, a glassboard, and a shade on the window.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="group" id="detail">
+    <div class="group-head">
+      <h2 class="group-title">Details</h2>
+      <p class="group-blurb">Drawn into the remodel rather than added later.</p>
+    </div>
+
+    <ul class="specs">
+      <li><b>Acoustic separation</b><span>Clinical Research Bay 2 is enclosed by a sound-rated partition, tested at STC 50, so two studies can run at once without one hearing the other.</span></li>
+      <li><b>Overhead</b><span>The 1926 concrete joists and beams stay exposed, with acoustic clouds hung below them in the testing bays and the shared lab.</span></li>
+      <li><b>Participant route</b><span>Changing room, lockers, and a private passage, so a participant never has to cross the bench area to reach a testing bay.</span></li>
+      <li><b>Chairside support</b><span>Nurse servers built into both bays and a mobile cart, so sample handling happens where the participant already is.</span></li>
+      <li><b>Water</b><span>Purified water at the wet lab bench, undermount sinks in both suites, and an emergency eye wash on each side.</span></li>
+      <li><b>Privacy</b><span>Ceiling-tracked curtains in the bays, blackout and filtering shades at the windows, and a dedicated interview room.</span></li>
+    </ul>
+
+    <p class="source">Room names, numbers, and dimensions are taken from the University of Wisconsin&ndash;Madison construction documents for project PRJ-26-006197, Remodel Lab Spaces, Service Memorial Institute, issued October 2026. The plan above is a simplified schematic drawn for this page and is not a construction document. Photographs will replace it once the space is finished.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <p class="foot-name">Vascular Stress Physiology and Resilience Laboratory</p>
+    <p class="foot-meta">
+      University of Wisconsin–Madison · Department of Kinesiology<br>
+      Service Memorial Institute &middot; 470 N. Charter St, Madison, WI 53706<br>
+      <a href="mailto:VSPRLab@wisc.edu">VSPRLab@wisc.edu</a>
+    </p>
+  </div>
+  <img class="foot-mark" src="Media/vspr-monogram.png" alt="">
+</footer>
+
+</body>
+</html>
