@@ -48,7 +48,11 @@ def name_html(p):
 
 
 def feature_card(p):
-    bio = '<p class="person-bio">%s</p>' % html.escape(p["bio"]) if p.get("bio") else ""
+    # bio may be a string or a list of paragraphs; a long bio needs breaks.
+    paras = p.get("bio") or []
+    if isinstance(paras, str):
+        paras = [paras]
+    bio = "\n          ".join('<p class="person-bio">%s</p>' % html.escape(t) for t in paras)
     return (
         '<div class="feature">\n'
         '        %s\n'
@@ -65,7 +69,10 @@ def feature_card(p):
 
 
 def card(p):
-    bio = '<p class="person-bio">%s</p>' % html.escape(p["bio"]) if p.get("bio") else ""
+    b = p.get("bio") or []
+    if isinstance(b, str):
+        b = [b]
+    bio = "".join('<p class="person-bio">%s</p>' % html.escape(t) for t in b)
     return (
         '<li class="person">\n'
         '          %s\n'
@@ -202,7 +209,8 @@ img{max-width:100%;height:auto;display:block}
   letter-spacing:.06em;color:var(--slate)}
 .person-role{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;
   text-transform:uppercase;color:var(--crimson);margin:0 0 .5rem}
-.person-bio{font-size:.95rem;color:var(--slate);margin:0}
+.person-bio{font-size:.95rem;color:var(--slate);margin:0 0 .85em}
+.person-bio:last-of-type{margin-bottom:0}
 .person-links{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
   margin:.55rem 0 0;display:flex;gap:12px;flex-wrap:wrap}
 .person-links a{color:var(--crimson);text-decoration:none;border-bottom:1px solid var(--gold)}
