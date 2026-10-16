@@ -17,7 +17,7 @@ Turn on two-factor authentication when it offers. GitHub requires it now anyway.
 
 On github.com click the `+` in the top right, then "New repository".
 
-- Repository name: `<your-username>.github.io` (exactly that, including the
+- Repository name: `njenkinsphd.github.io` (exactly that, including the
   `.github.io` part). This makes it a user site served at the clean root URL.
 - Visibility: Public. Free website hosting requires it.
 - Do not add a README, a .gitignore, or a license. This folder already has them.
@@ -28,7 +28,7 @@ Open Terminal and paste these, substituting your username.
 
 ```
 cd "$HOME/Documents/VSPR Website Landscaping"
-git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
+git remote add origin https://github.com/njenkinsphd/njenkinsphd.github.io.git
 git push -u origin main
 ```
 
@@ -51,7 +51,7 @@ In the repository, go to Settings, then Pages in the left sidebar.
 - Save
 
 Give it about two minutes. The site appears at
-`https://<your-username>.github.io/`.
+`https://njenkinsphd.github.io/`.
 
 ## 5. Let the publications job write back
 
@@ -71,7 +71,7 @@ nothing about the site has to change.
 1. Request the domain through UW's website domain procedure. All third-level
    wisc.edu domains are approved by the Office of Strategic Communication under
    policy UW-207. Ask DoIT for a CNAME record pointing your chosen name at
-   `<your-username>.github.io`.
+   `njenkinsphd.github.io`.
 2. Once the record exists, add the domain in Settings, then Pages, under Custom
    domain. GitHub writes a `CNAME` file into the repository and issues a free
    certificate within about fifteen minutes.
