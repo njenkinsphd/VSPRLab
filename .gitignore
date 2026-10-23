@@ -13,3 +13,10 @@ medline.txt
 __pycache__/
 *.pyc
 Media/Headshot.jpg
+
+# Source headshots, kept out of the repo (web copies live in Media/)
+*headshot*.jpg
+*headshot*.jpeg
+!Media/headshot-*.jpg
+People.docx
+~$*
