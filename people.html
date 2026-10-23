@@ -60,6 +60,17 @@ img{max-width:100%;height:auto;display:block}
 
 .people-grid{list-style:none;margin:0;padding:0;display:grid;gap:clamp(22px,3vw,36px);
   grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+
+.member-list{list-style:none;margin:0;padding:0;display:grid;gap:clamp(26px,3.2vw,46px);
+  grid-template-columns:repeat(auto-fill,minmax(min(440px,100%),1fr))}
+.member{display:flex;gap:clamp(16px,1.8vw,24px);align-items:flex-start}
+.member .portrait{width:132px;flex:0 0 132px}
+.member-body{flex:1 1 auto;min-width:0}
+.member .person-name{margin-top:0}
+@media (max-width:560px){
+  .member{flex-direction:column}
+  .member .portrait{width:148px;flex:0 0 auto}
+}
 .person{margin:0}
 
 .person-name{font-family:var(--display);font-weight:700;font-size:1.06rem;
@@ -134,48 +145,62 @@ img{max-width:100%;height:auto;display:block}
     <div class="group-head">
       <h2 class="group-title">Lab members</h2>
     </div>
-      <ul class="people-grid">
-        <li class="person">
+      <ul class="member-list">
+        <li class="member">
           <div class="portrait portrait-blank" aria-hidden="true">GP</div>
-          <h3 class="person-name">Gavin Power, <span class="creds">PhD</span></h3>
-          <p class="person-role">Postdoctoral Fellow</p>
-          
-          
+          <div class="member-body">
+            <h3 class="person-name">Gavin Power, <span class="creds">PhD</span></h3>
+            <p class="person-role">Postdoctoral Fellow</p>
+            
+            
+          </div>
         </li>
-        <li class="person">
-          <div class="portrait portrait-blank" aria-hidden="true">ML</div>
-          <h3 class="person-name">Manoela Lima Oliveira, <span class="creds">PhD</span></h3>
-          <p class="person-role">Postdoctoral Fellow</p>
-          
-          
+        <li class="member">
+          <img class="portrait" src="Media/headshot-oliveira.jpg" alt="Manoela Lima Oliveira" loading="lazy">
+          <div class="member-body">
+            <h3 class="person-name">Manoela Lima Oliveira, <span class="creds">PhD</span></h3>
+            <p class="person-role">Postdoctoral Fellow</p>
+            <p class="person-bio">Dr. Manoela Lima Oliveira is a registered dietitian and nutrition researcher who earned her PhD in Human Nutrition from the University of Illinois Chicago, where she worked under the guidance of Dr. Lisa Tussing-Humphreys. Her research explored the intersections of early-onset colorectal cancer prevention, time-restricted eating patterns, mindfulness-based interventions, and the complex relationships between dietary quality, chronic psychosocial stress, and gut microbiome composition.</p>
+          <p class="person-bio">With an academic foundation between both U.S. and Brazilian institutions, Dr. Oliveira has made substantial contributions to the scientific literature through peer-reviewed publications and presentations at leading conferences. Her work has received prestigious recognition, including a Predoctoral Fellowship at the NCI T32 University of Illinois Chicago’s Cancer Education and Career Development Program, a National Cancer Institute (NCI) travel award, the Best Poster award at the Dr. Gary Kruh Cancer Research Symposium, and the American Health Sciences Achievement Award from the Kinesiology &amp; Nutrition Doctorate Program.</p>
+          <p class="person-bio">Dr. Lima Oliveira joined the laboratory as a Postdoctoral Scholar in 2025. In this role, she has continued her research on chronic psychosocial stress and its health implications while expanding her focus to include Dr. Jenkins’ work investigating the biological and behavioral mechanisms through which Adverse Childhood Experiences influence diverse health outcomes. She is currently supported by an American Heart Association Postdoctoral Research Supplement to Promote Diversity in Science (2025-2027).</p>
+            
+          </div>
         </li>
-        <li class="person">
+        <li class="member">
           <img class="portrait" src="Media/headshot-schwager.jpg" alt="Laura Schwager" loading="lazy">
-          <h3 class="person-name">Laura Schwager, <span class="creds">BA</span></h3>
-          <p class="person-role">Research Associate</p>
-          
-          
+          <div class="member-body">
+            <h3 class="person-name">Laura Schwager, <span class="creds">BA</span></h3>
+            <p class="person-role">Research Associate</p>
+            <p class="person-bio">Laura graduated from the University of Iowa with a bachelor’s degree in Design Anthropology, a self-directed program of study focusing on global development at the intersection of environmental science and public health. Laura joined the APLM lab in September 2021. As the Research Associate, she manages the lab, organizes and leads projects, and helps to develop and execute protocol relating to the lab’s central research focus, the mechanistic exploration of the relationship between childhood psychosocial stress and premature cardiometabolic disease risk.</p>
+            
+          </div>
         </li>
-        <li class="person">
+        <li class="member">
           <img class="portrait" src="Media/headshot-flores.jpg" alt="Mark Flores" loading="lazy">
-          <h3 class="person-name">Mark Flores</h3>
-          <p class="person-role">PhD Candidate</p>
-          
-          
+          <div class="member-body">
+            <h3 class="person-name">Mark Flores</h3>
+            <p class="person-role">PhD Candidate</p>
+            <p class="person-bio">Mark is a fourth year PhD candidate in Health and Human Physiology. Mark completed his Bachelor of Science in Chemistry &amp; Kinesiology at McDaniel College in Westminster, Maryland. Mark’s primary research interests include the study of psychosocial and sociocultural factors contributing to health outcomes, particularly as it relates to health disparities among underrepresented populations. Mark is currently leading a project examining the role of daily stress processes in ethnicity-related differences in vascular function and metabolism. Mark is currently supported by the Lulu Merle Johnson Recruitment Fellowship from the UI Graduate College and was named an American Heart Association Scholar in the National Hispanic Latino Cardiovascular Collaborative (NHLLC) for the 2025-2026 program year. Recently, Mark accepted a position as a Program Consultant with the American Heart Association.</p>
+            
+          </div>
         </li>
-        <li class="person">
+        <li class="member">
           <img class="portrait" src="Media/headshot-west.jpg" alt="Kylee West" loading="lazy">
-          <h3 class="person-name">Kylee West</h3>
-          <p class="person-role">PhD Candidate</p>
-          
-          
+          <div class="member-body">
+            <h3 class="person-name">Kylee West</h3>
+            <p class="person-role">PhD Candidate</p>
+            <p class="person-bio">Kylee is a third year PhD student in Health and Human Physiology. Kylee completed her Bachelor of Science in Exercise and Sports Science at Campbell University. She completed her Master of Science in Kinesiology at Georgia Southern University where she studied the effects of exercise interventions on cardiovascular and motor performance outcomes in aging adults with and without chronic diseases. Since arriving at Iowa, Kylee has diversified her skillset to include in vitro endothelial cell experiments and is exploring the effects of modifiable lifestyle behaviors (particularly sleep) that can mitigate the risk of cardiovascular and metabolic diseases.</p>
+            
+          </div>
         </li>
-        <li class="person">
+        <li class="member">
           <div class="portrait portrait-blank" aria-hidden="true">SE</div>
-          <h3 class="person-name">Sequoia Ernst</h3>
-          <p class="person-role">MS Student</p>
-          
-          
+          <div class="member-body">
+            <h3 class="person-name">Sequoia Ernst</h3>
+            <p class="person-role">MS Student</p>
+            
+            
+          </div>
         </li>
       </ul>
   </section>

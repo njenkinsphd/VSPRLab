@@ -85,6 +85,27 @@ def card(p):
     )
 
 
+def member_block(p):
+    """Portrait beside a bio. Used where people have something to say about
+    themselves and a square tile has nowhere to put it."""
+    b = p.get("bio") or []
+    if isinstance(b, str):
+        b = [b]
+    bio = "\n          ".join('<p class="person-bio">%s</p>' % html.escape(t) for t in b)
+    return (
+        '<li class="member">\n'
+        '          %s\n'
+        '          <div class="member-body">\n'
+        '            <h3 class="person-name">%s</h3>\n'
+        '            <p class="person-role">%s</p>\n'
+        '            %s\n'
+        '            %s\n'
+        '          </div>\n'
+        '        </li>'
+        % (photo_html(p), name_html(p), html.escape(p.get("role") or ""), bio, links_html(p))
+    )
+
+
 def compact_row(p):
     """Alumni carry two facts: what they did here, and where they are now."""
     role = html.escape(p.get("role") or "")
@@ -125,6 +146,10 @@ def build(data):
 
         if g.get("feature"):
             body = "\n      ".join(feature_card(p) for p in people)
+        elif g.get("blocks"):
+            body = ('<ul class="member-list">\n        '
+                    + "\n        ".join(member_block(p) for p in people)
+                    + '\n      </ul>')
         elif g.get("compact"):
             body = ('<ul class="alum-list">\n        '
                     + "\n        ".join(compact_row(p) for p in people)
@@ -201,6 +226,17 @@ img{max-width:100%;height:auto;display:block}
 
 .people-grid{list-style:none;margin:0;padding:0;display:grid;gap:clamp(22px,3vw,36px);
   grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+
+.member-list{list-style:none;margin:0;padding:0;display:grid;gap:clamp(26px,3.2vw,46px);
+  grid-template-columns:repeat(auto-fill,minmax(min(440px,100%),1fr))}
+.member{display:flex;gap:clamp(16px,1.8vw,24px);align-items:flex-start}
+.member .portrait{width:132px;flex:0 0 132px}
+.member-body{flex:1 1 auto;min-width:0}
+.member .person-name{margin-top:0}
+@media (max-width:560px){
+  .member{flex-direction:column}
+  .member .portrait{width:148px;flex:0 0 auto}
+}
 .person{margin:0}
 
 .person-name{font-family:var(--display);font-weight:700;font-size:1.06rem;
