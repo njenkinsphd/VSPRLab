@@ -215,7 +215,7 @@ img{max-width:100%;height:auto;display:block}
 
 .portrait{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px;
   background:var(--paper-deep);filter:grayscale(1) contrast(1.02)}
-.person:hover .portrait,.feature:hover .portrait{filter:none}
+.person:hover .portrait,.feature:hover .portrait,.member:hover .portrait{filter:none}
 .portrait-lg{width:200px;flex:0 0 200px}
 .portrait-blank{display:flex;align-items:center;justify-content:center;
   font-family:var(--display);font-weight:700;font-size:1.6rem;color:var(--slate);
