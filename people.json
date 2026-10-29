@@ -230,12 +230,13 @@
           "name": "Sydni Schulte",
           "credentials": "",
           "role": "Undergraduate Research Assistant",
-          "now": "[PLACEHOLDER] Where now?",
+          "now": "Physician Assistant student, University of Dubuque",
           "photo": null,
           "email": null,
           "scholar": null,
           "orcid": null,
-          "bio": null
+          "bio": null,
+          "now_url": "https://www.dbq.edu/Academics/GraduatePrograms/MasterofScienceinPhysicianAssistantStudies/"
         }
       ]
     }
