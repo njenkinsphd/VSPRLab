@@ -114,6 +114,13 @@
       "compact": true,
       "people": [
         {
+          "name": "Ryan Colquhoun",
+          "credentials": "PhD",
+          "role": "PhD 2019, the lab's first doctoral trainee",
+          "now": "Associate Professor, University of South Alabama",
+          "now_url": "https://www.southalabama.edu/colleges/ceps/hks/colquhoun.html"
+        },
+        {
           "name": "Nile Banks",
           "credentials": "PhD",
           "role": "PhD 2023, then postdoc with Bill Schrage at UW–Madison",
