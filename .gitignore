@@ -20,3 +20,11 @@ Media/Headshot.jpg
 !Media/headshot-*.jpg
 People.docx
 ~$*
+
+# Source images and data files dropped into the folder, never published
+*.xlsx
+*.xls
+*.csv
+Gavin Power.png
+Sequoia Ernst Headshot*.jpg
+Manu Headshot*
