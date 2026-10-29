@@ -93,13 +93,15 @@
         },
         {
           "name": "Sequoia Ernst",
-          "credentials": "",
+          "credentials": "BS",
           "role": "MS Student",
-          "photo": null,
+          "photo": "Media/headshot-ernst.jpg",
           "email": null,
           "scholar": null,
           "orcid": null,
-          "bio": null
+          "bio": [
+            "Sequoia is a first-year master’s student in the Kinesiology: Exercise Physiology track. He completed his undergraduate education at Florida State University where he studied exercise physiology. During this time, he assisted Dr. Robert Hickner’s research on the influence of NOX-derived reactive oxygen species on vascular function through FSU’s UROP program. After completing UROP, he transitioned into Dr. Joseph Watso’s Laboratory, where he researched cardiometabolic responses to hyperpnea and body composition influences on blood pressure variability. He’s excited to continue studying vascular function in his graduate work at UW Madison."
+          ]
         }
       ],
       "blocks": true
