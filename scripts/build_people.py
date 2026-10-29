@@ -110,6 +110,8 @@ def compact_row(p):
     """Alumni carry two facts: what they did here, and where they are now."""
     role = html.escape(p.get("role") or "")
     now = html.escape(p.get("now") or "")
+    if now and p.get("now_url"):
+        now = '<a href="%s" rel="noopener">%s</a>' % (html.escape(p["now_url"]), now)
     head = ('<div class="alum-head"><span class="alum-name">%s</span>'
             '<span class="alum-now">%s</span></div>' % (name_html(p), now or role))
     sub = '<p class="alum-role">%s</p>' % role if (now and role) else ""
@@ -256,6 +258,8 @@ img{max-width:100%;height:auto;display:block}
 .alum{break-inside:avoid;padding:.5rem 0;border-bottom:var(--rule)}
 .alum-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
 .alum-name{font-weight:600}
+.alum-now a{color:inherit;text-decoration:none;border-bottom:1px solid var(--gold)}
+.alum-now a:hover{color:var(--crimson);border-bottom-color:var(--crimson)}
 .alum-now{font-size:.9rem;color:var(--slate);text-align:right}
 .alum-role{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold);margin:.15rem 0 0}
