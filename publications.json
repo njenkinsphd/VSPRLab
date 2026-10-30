@@ -1,34 +1,9 @@
 {
   "source": "PubMed",
   "query": "Jenkins NDM[Author]",
-  "generated": "2026-10-16",
+  "generated": "2026-10-30",
   "count": 113,
   "records": [
-    {
-      "pmid": "42094154",
-      "doi": "10.64898/2026.04.24.26351696",
-      "pmc": "PMC13142581",
-      "title": "Adverse childhood family environment is associated with altered cardiovascular regulation during exercise among young adults in the Coronary Artery Risk Development in Young Adults (CARDIA) Study",
-      "authors": [
-        "Jenkins NDM",
-        "Robinson AT",
-        "Hornikel B",
-        "Whitaker KM",
-        "Jacobs DR",
-        "Kershaw K",
-        "Pettee Gabriel K"
-      ],
-      "journal": "medRxiv",
-      "year": 2026,
-      "volume": null,
-      "issue": null,
-      "pages": null,
-      "group": "preprint",
-      "article_types": [
-        "Journal Article",
-        "Preprint"
-      ]
-    },
     {
       "pmid": "41638502",
       "doi": "10.1016/j.jad.2026.121324",
@@ -154,6 +129,30 @@
       "article_types": [
         "Journal Article",
         "Case Reports"
+      ]
+    },
+    {
+      "pmid": "42932972",
+      "doi": "10.1152/ajpheart.90247.2026",
+      "pmc": null,
+      "title": "Adverse childhood family environment is associated with altered cardiovascular regulation during exercise: the CARDIA Study",
+      "authors": [
+        "Jenkins NDM",
+        "Robinson AT",
+        "Hornikel B",
+        "Whitaker KM",
+        "Jacobs DR",
+        "Kershaw K",
+        "Gabriel KP"
+      ],
+      "journal": "Am J Physiol Heart Circ Physiol",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "group": "article",
+      "article_types": [
+        "Journal Article"
       ]
     },
     {

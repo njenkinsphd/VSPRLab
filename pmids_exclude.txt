@@ -13,3 +13,5 @@
 32485739   # Systematic review of frailty trajectories
 30380129   # Systematic review of pulmonary function and cognition
 4800769    # 1973 JAMA letter on heparin standards, another N.D. Jenkins
+
+42094154   # medRxiv preprint of the CARDIA ACFE exercise paper, superseded by PMID 42932972
