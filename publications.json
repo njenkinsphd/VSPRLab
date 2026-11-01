@@ -1,9 +1,33 @@
 {
   "source": "PubMed",
   "query": "Jenkins NDM[Author]",
-  "generated": "2026-10-30",
+  "generated": "2026-11-01",
   "count": 113,
   "records": [
+    {
+      "pmid": "42932972",
+      "doi": "10.1152/ajpheart.90247.2026",
+      "pmc": null,
+      "title": "Adverse childhood family environment is associated with altered cardiovascular regulation during exercise: the CARDIA Study",
+      "authors": [
+        "Jenkins NDM",
+        "Robinson AT",
+        "Hornikel B",
+        "Whitaker KM",
+        "Jacobs DR",
+        "Kershaw K",
+        "Gabriel KP"
+      ],
+      "journal": "Am J Physiol Heart Circ Physiol",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
     {
       "pmid": "41638502",
       "doi": "10.1016/j.jad.2026.121324",
@@ -64,6 +88,28 @@
       ]
     },
     {
+      "pmid": "41566566",
+      "doi": "10.1097/JSM.0000000000001399",
+      "pmc": null,
+      "title": "Hyperlactation and Sport Performance in an Elite Marathon Runner",
+      "authors": [
+        "McLachlan ML",
+        "Slayman TG",
+        "Jenkins ND",
+        "Woodroffe LM"
+      ],
+      "journal": "Clin J Sport Med",
+      "year": 2026,
+      "volume": "36",
+      "issue": "4",
+      "pages": "e121-e124",
+      "group": "article",
+      "article_types": [
+        "Journal Article",
+        "Case Reports"
+      ]
+    },
+    {
       "pmid": "41747234",
       "doi": "10.1139/apnm-2025-0397",
       "pmc": null,
@@ -90,9 +136,35 @@
       ]
     },
     {
+      "pmid": "39093318",
+      "doi": "10.1113/EP091535",
+      "pmc": "PMC13238634",
+      "title": "Resistance exercise breaks during prolonged sitting augment the blood flow response to a subsequent oral glucose load in sedentary adults",
+      "authors": [
+        "Rogers EM",
+        "Banks NF",
+        "Trachta ER",
+        "Wolf MS",
+        "Berry AC",
+        "Stanhewicz AE",
+        "Carr LJ",
+        "Gibbs BB",
+        "Jenkins NDM"
+      ],
+      "journal": "Exp Physiol",
+      "year": 2026,
+      "volume": "111",
+      "issue": "6",
+      "pages": "3082-3098",
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
       "pmid": "41875237",
       "doi": "10.1152/ajpheart.00219.2026",
-      "pmc": null,
+      "pmc": "PMC13656247",
       "title": "Sleeping on oxidative stress as a mechanism underlying cardiovascular risk in chronic anxiety",
       "authors": [
         "Bigalke JA",
@@ -107,52 +179,6 @@
       "article_types": [
         "Journal Article",
         "Comment"
-      ]
-    },
-    {
-      "pmid": "41566566",
-      "doi": "10.1097/JSM.0000000000001399",
-      "pmc": null,
-      "title": "Hyperlactation and Sport Performance in an Elite Marathon Runner",
-      "authors": [
-        "McLachlan ML",
-        "Slayman TG",
-        "Jenkins ND",
-        "Woodroffe LM"
-      ],
-      "journal": "Clin J Sport Med",
-      "year": 2026,
-      "volume": "36",
-      "issue": "4",
-      "pages": "e121-e124",
-      "group": "article",
-      "article_types": [
-        "Journal Article",
-        "Case Reports"
-      ]
-    },
-    {
-      "pmid": "42932972",
-      "doi": "10.1152/ajpheart.90247.2026",
-      "pmc": null,
-      "title": "Adverse childhood family environment is associated with altered cardiovascular regulation during exercise: the CARDIA Study",
-      "authors": [
-        "Jenkins NDM",
-        "Robinson AT",
-        "Hornikel B",
-        "Whitaker KM",
-        "Jacobs DR",
-        "Kershaw K",
-        "Gabriel KP"
-      ],
-      "journal": "Am J Physiol Heart Circ Physiol",
-      "year": 2026,
-      "volume": null,
-      "issue": null,
-      "pages": null,
-      "group": "article",
-      "article_types": [
-        "Journal Article"
       ]
     },
     {
@@ -239,6 +265,32 @@
       "group": "article",
       "article_types": [
         "Journal Article"
+      ]
+    },
+    {
+      "pmid": "39726136",
+      "doi": "10.1152/japplphysiol.00874.2024",
+      "pmc": "PMC12182273",
+      "title": "Habitual preexercise caffeine supplementation prevents exercise training-induced attenuation of exercising systolic blood pressure and double product",
+      "authors": [
+        "West KS",
+        "Helwig NJ",
+        "Schwager LE",
+        "Hart TW",
+        "Zucker AC",
+        "Venenga JS",
+        "Flores M",
+        "Jenkins NDM"
+      ],
+      "journal": "J Appl Physiol (1985)",
+      "year": 2025,
+      "volume": "138",
+      "issue": "2",
+      "pages": "358-365",
+      "group": "article",
+      "article_types": [
+        "Journal Article",
+        "Randomized Controlled Trial"
       ]
     },
     {
@@ -475,54 +527,101 @@
       ]
     },
     {
-      "pmid": "39726136",
-      "doi": "10.1152/japplphysiol.00874.2024",
-      "pmc": "PMC12182273",
-      "title": "Habitual preexercise caffeine supplementation prevents exercise training-induced attenuation of exercising systolic blood pressure and double product",
+      "pmid": "37186677",
+      "doi": "10.1080/27697061.2023.2207096",
+      "pmc": null,
+      "title": "Novel Energy Drink Improves Cognitive Function and Mood, without Influencing Myocardial Oxygen Demand or Ventricular Repolarization in Adult Gamers: A Randomized, Double-Blind, Placebo-Controlled, Crossover Trial",
       "authors": [
-        "West KS",
-        "Helwig NJ",
         "Schwager LE",
-        "Hart TW",
-        "Zucker AC",
-        "Venenga JS",
-        "Flores M",
+        "Helwig NJ",
+        "Rogers EM",
+        "Banks NF",
+        "Alpers JP",
+        "Schulte SL",
+        "Lockwood CM",
         "Jenkins NDM"
       ],
-      "journal": "J Appl Physiol (1985)",
+      "journal": "J Am Nutr Assoc",
       "year": 2024,
-      "volume": "138",
-      "issue": "2",
-      "pages": "358-365",
+      "volume": "43",
+      "issue": "1",
+      "pages": "33-47",
       "group": "article",
       "article_types": [
-        "Journal Article",
-        "Randomized Controlled Trial"
+        "Randomized Controlled Trial",
+        "Journal Article"
       ]
     },
     {
-      "pmid": "39093318",
-      "doi": "10.1113/EP091535",
-      "pmc": "PMC13238634",
-      "title": "Resistance exercise breaks during prolonged sitting augment the blood flow response to a subsequent oral glucose load in sedentary adults",
+      "pmid": "37788958",
+      "doi": "10.1016/j.numecd.2023.08.017",
+      "pmc": null,
+      "title": "Postprandial triglycerides across the aging spectrum: A secondary analysis utilizing an abbreviated fat tolerance test",
       "authors": [
-        "Rogers EM",
-        "Banks NF",
-        "Trachta ER",
-        "Wolf MS",
-        "Berry AC",
-        "Stanhewicz AE",
-        "Carr LJ",
-        "Gibbs BB",
-        "Jenkins NDM"
+        "Keirns BH",
+        "Sciarrillo CM",
+        "Poindexter KL",
+        "Dixon MD",
+        "Medlin AR",
+        "Koemel NA",
+        "Hart SM",
+        "Geist CH",
+        "Jenkins NDM",
+        "Lucas EA",
+        "Emerson SR"
       ],
-      "journal": "Exp Physiol",
+      "journal": "Nutr Metab Cardiovasc Dis",
       "year": 2024,
-      "volume": "111",
-      "issue": "6",
-      "pages": "3082-3098",
+      "volume": "34",
+      "issue": "1",
+      "pages": "121-125",
       "group": "article",
       "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "37889252",
+      "doi": "10.1152/ajpheart.00402.2023",
+      "pmc": "PMC12080917",
+      "title": "Progressive iso-inertial resistance exercise promotes more favorable cardiovascular adaptations than traditional resistance exercise in young adults",
+      "authors": [
+        "Banks NF",
+        "Rogers EM",
+        "Berry AC",
+        "Jenkins NDM"
+      ],
+      "journal": "Am J Physiol Heart Circ Physiol",
+      "year": 2024,
+      "volume": "326",
+      "issue": "1",
+      "pages": "H32-H43",
+      "group": "article",
+      "article_types": [
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "37975709",
+      "doi": "10.1152/ajpheart.00386.2023",
+      "pmc": "PMC11219052",
+      "title": "Resistance exercise lowers blood pressure and improves vascular endothelial function in individuals with elevated blood pressure or stage-1 hypertension",
+      "authors": [
+        "Banks NF",
+        "Rogers EM",
+        "Stanhewicz AE",
+        "Whitaker KM",
+        "Jenkins NDM"
+      ],
+      "journal": "Am J Physiol Heart Circ Physiol",
+      "year": 2024,
+      "volume": "326",
+      "issue": "1",
+      "pages": "H256-H269",
+      "group": "article",
+      "article_types": [
+        "Randomized Controlled Trial",
         "Journal Article"
       ]
     },
@@ -552,6 +651,27 @@
       ]
     },
     {
+      "pmid": "37269143",
+      "doi": "10.1002/dmrr.3667",
+      "pmc": null,
+      "title": "The effects of sleep disruption on metabolism, hunger, and satiety, and the influence of psychosocial stress and exercise: A narrative review",
+      "authors": [
+        "Rogers EM",
+        "Banks NF",
+        "Jenkins NDM"
+      ],
+      "journal": "Diabetes Metab Res Rev",
+      "year": 2024,
+      "volume": "40",
+      "issue": "2",
+      "pages": "e3667",
+      "group": "review",
+      "article_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
       "pmid": "37560764",
       "doi": "10.1152/japplphysiol.00052.2023",
       "pmc": null,
@@ -573,28 +693,48 @@
       ]
     },
     {
-      "pmid": "37186677",
-      "doi": "10.1080/27697061.2023.2207096",
-      "pmc": null,
-      "title": "Novel Energy Drink Improves Cognitive Function and Mood, without Influencing Myocardial Oxygen Demand or Ventricular Repolarization in Adult Gamers: A Randomized, Double-Blind, Placebo-Controlled, Crossover Trial",
+      "pmid": "36332719",
+      "doi": "10.1053/j.ajkd.2022.08.028",
+      "pmc": "PMC9974577",
+      "title": "Intensive Care Unit-Acquired Weakness in Patients With Acute Kidney Injury: A Contemporary Review",
       "authors": [
-        "Schwager LE",
-        "Helwig NJ",
+        "Teixeira JP",
+        "Mayer KP",
+        "Griffin BR",
+        "George N",
+        "Jenkins N",
+        "Pal CA",
+        "González-Seguel F",
+        "Neyra JA"
+      ],
+      "journal": "Am J Kidney Dis",
+      "year": 2023,
+      "volume": "81",
+      "issue": "3",
+      "pages": "336-351",
+      "group": "review",
+      "article_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "36420592",
+      "doi": "10.1113/EP090540",
+      "pmc": "PMC10103776",
+      "title": "Metabolic and microvascular function assessed using near-infrared spectroscopy with vascular occlusion in women: age differences and reliability",
+      "authors": [
         "Rogers EM",
         "Banks NF",
-        "Alpers JP",
-        "Schulte SL",
-        "Lockwood CM",
         "Jenkins NDM"
       ],
-      "journal": "J Am Nutr Assoc",
+      "journal": "Exp Physiol",
       "year": 2023,
-      "volume": "43",
+      "volume": "108",
       "issue": "1",
-      "pages": "33-47",
+      "pages": "123-134",
       "group": "article",
       "article_types": [
-        "Randomized Controlled Trial",
         "Journal Article"
       ]
     },
@@ -623,34 +763,6 @@
       ]
     },
     {
-      "pmid": "37788958",
-      "doi": "10.1016/j.numecd.2023.08.017",
-      "pmc": null,
-      "title": "Postprandial triglycerides across the aging spectrum: A secondary analysis utilizing an abbreviated fat tolerance test",
-      "authors": [
-        "Keirns BH",
-        "Sciarrillo CM",
-        "Poindexter KL",
-        "Dixon MD",
-        "Medlin AR",
-        "Koemel NA",
-        "Hart SM",
-        "Geist CH",
-        "Jenkins NDM",
-        "Lucas EA",
-        "Emerson SR"
-      ],
-      "journal": "Nutr Metab Cardiovasc Dis",
-      "year": 2023,
-      "volume": "34",
-      "issue": "1",
-      "pages": "121-125",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
-      ]
-    },
-    {
       "pmid": "36727632",
       "doi": "10.1152/japplphysiol.00524.2022",
       "pmc": "PMC10027078",
@@ -671,51 +783,6 @@
       "volume": "134",
       "issue": "3",
       "pages": "742-752",
-      "group": "article",
-      "article_types": [
-        "Randomized Controlled Trial",
-        "Journal Article"
-      ]
-    },
-    {
-      "pmid": "37889252",
-      "doi": "10.1152/ajpheart.00402.2023",
-      "pmc": "PMC12080917",
-      "title": "Progressive iso-inertial resistance exercise promotes more favorable cardiovascular adaptations than traditional resistance exercise in young adults",
-      "authors": [
-        "Banks NF",
-        "Rogers EM",
-        "Berry AC",
-        "Jenkins NDM"
-      ],
-      "journal": "Am J Physiol Heart Circ Physiol",
-      "year": 2023,
-      "volume": "326",
-      "issue": "1",
-      "pages": "H32-H43",
-      "group": "article",
-      "article_types": [
-        "Randomized Controlled Trial",
-        "Journal Article"
-      ]
-    },
-    {
-      "pmid": "37975709",
-      "doi": "10.1152/ajpheart.00386.2023",
-      "pmc": "PMC11219052",
-      "title": "Resistance exercise lowers blood pressure and improves vascular endothelial function in individuals with elevated blood pressure or stage-1 hypertension",
-      "authors": [
-        "Banks NF",
-        "Rogers EM",
-        "Stanhewicz AE",
-        "Whitaker KM",
-        "Jenkins NDM"
-      ],
-      "journal": "Am J Physiol Heart Circ Physiol",
-      "year": 2023,
-      "volume": "326",
-      "issue": "1",
-      "pages": "H256-H269",
       "group": "article",
       "article_types": [
         "Randomized Controlled Trial",
@@ -773,27 +840,6 @@
       ]
     },
     {
-      "pmid": "37269143",
-      "doi": "10.1002/dmrr.3667",
-      "pmc": null,
-      "title": "The effects of sleep disruption on metabolism, hunger, and satiety, and the influence of psychosocial stress and exercise: A narrative review",
-      "authors": [
-        "Rogers EM",
-        "Banks NF",
-        "Jenkins NDM"
-      ],
-      "journal": "Diabetes Metab Res Rev",
-      "year": 2023,
-      "volume": "40",
-      "issue": "2",
-      "pages": "e3667",
-      "group": "review",
-      "article_types": [
-        "Journal Article",
-        "Review"
-      ]
-    },
-    {
       "pmid": "35859580",
       "doi": "10.1093/function/zqac032",
       "pmc": "PMC9279110",
@@ -814,49 +860,52 @@
       ]
     },
     {
-      "pmid": "36420592",
-      "doi": "10.1113/EP090540",
-      "pmc": "PMC10103776",
-      "title": "Metabolic and microvascular function assessed using near-infrared spectroscopy with vascular occlusion in women: age differences and reliability",
+      "pmid": "34951146",
+      "doi": "10.1002/jcsm.12898",
+      "pmc": "PMC8818606",
+      "title": "The contributory role of vascular health in age-related anabolic resistance",
       "authors": [
-        "Rogers EM",
         "Banks NF",
+        "Rogers EM",
+        "Church DD",
+        "Ferrando AA",
         "Jenkins NDM"
       ],
-      "journal": "Exp Physiol",
+      "journal": "J Cachexia Sarcopenia Muscle",
       "year": 2022,
-      "volume": "108",
+      "volume": "13",
       "issue": "1",
-      "pages": "123-134",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
-      ]
-    },
-    {
-      "pmid": "36332719",
-      "doi": "10.1053/j.ajkd.2022.08.028",
-      "pmc": "PMC9974577",
-      "title": "Intensive Care Unit-Acquired Weakness in Patients With Acute Kidney Injury: A Contemporary Review",
-      "authors": [
-        "Teixeira JP",
-        "Mayer KP",
-        "Griffin BR",
-        "George N",
-        "Jenkins N",
-        "Pal CA",
-        "González-Seguel F",
-        "Neyra JA"
-      ],
-      "journal": "Am J Kidney Dis",
-      "year": 2022,
-      "volume": "81",
-      "issue": "3",
-      "pages": "336-351",
+      "pages": "114-127",
       "group": "review",
       "article_types": [
         "Journal Article",
         "Review"
+      ]
+    },
+    {
+      "pmid": "34763617",
+      "doi": "10.1080/00222895.2021.2001412",
+      "pmc": null,
+      "title": "The Influence of Motor Unit Number and Muscle Activation on Early Phase Rate of Torque Development in Younger and Older Men",
+      "authors": [
+        "Magrini MA",
+        "Colquhoun RJ",
+        "Ferrell MC",
+        "Fleming SR",
+        "Mota JA",
+        "Siedlik JA",
+        "Poidomani NM",
+        "Jenkins NDM",
+        "DeFreitas JM"
+      ],
+      "journal": "J Mot Behav",
+      "year": 2022,
+      "volume": "54",
+      "issue": "4",
+      "pages": "422-428",
+      "group": "article",
+      "article_types": [
+        "Journal Article"
       ]
     },
     {
@@ -879,6 +928,48 @@
       "volume": "321",
       "issue": "3",
       "pages": "H532-H541",
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "33123807",
+      "doi": "10.1007/s00421-020-04532-0",
+      "pmc": "PMC9762459",
+      "title": "Electromyographic amplitude versus torque relationships are different in young versus postmenopausal females and are related to muscle mass after controlling for bodyweight",
+      "authors": [
+        "Banks NF",
+        "Rogers EM",
+        "Jenkins NDM"
+      ],
+      "journal": "Eur J Appl Physiol",
+      "year": 2021,
+      "volume": "121",
+      "issue": "2",
+      "pages": "479-488",
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "33043836",
+      "doi": "10.1080/17461391.2020.1836262",
+      "pmc": "PMC9762464",
+      "title": "Increases in motor unit action potential amplitudes are related to muscle hypertrophy following eight weeks of high-intensity exercise training in females",
+      "authors": [
+        "Jenkins NDM",
+        "Rogers EM",
+        "Banks NF",
+        "Muddle TWD",
+        "Colquhoun RJ"
+      ],
+      "journal": "Eur J Sport Sci",
+      "year": 2021,
+      "volume": "21",
+      "issue": "10",
+      "pages": "1403-1413",
       "group": "article",
       "article_types": [
         "Journal Article"
@@ -966,55 +1057,6 @@
       ]
     },
     {
-      "pmid": "34951146",
-      "doi": "10.1002/jcsm.12898",
-      "pmc": "PMC8818606",
-      "title": "The contributory role of vascular health in age-related anabolic resistance",
-      "authors": [
-        "Banks NF",
-        "Rogers EM",
-        "Church DD",
-        "Ferrando AA",
-        "Jenkins NDM"
-      ],
-      "journal": "J Cachexia Sarcopenia Muscle",
-      "year": 2021,
-      "volume": "13",
-      "issue": "1",
-      "pages": "114-127",
-      "group": "review",
-      "article_types": [
-        "Journal Article",
-        "Review"
-      ]
-    },
-    {
-      "pmid": "34763617",
-      "doi": "10.1080/00222895.2021.2001412",
-      "pmc": null,
-      "title": "The Influence of Motor Unit Number and Muscle Activation on Early Phase Rate of Torque Development in Younger and Older Men",
-      "authors": [
-        "Magrini MA",
-        "Colquhoun RJ",
-        "Ferrell MC",
-        "Fleming SR",
-        "Mota JA",
-        "Siedlik JA",
-        "Poidomani NM",
-        "Jenkins NDM",
-        "DeFreitas JM"
-      ],
-      "journal": "J Mot Behav",
-      "year": 2021,
-      "volume": "54",
-      "issue": "4",
-      "pages": "422-428",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
-      ]
-    },
-    {
       "pmid": "34024551",
       "doi": "10.1016/j.clnesp.2021.03.010",
       "pmc": null,
@@ -1080,48 +1122,6 @@
       "volume": "36",
       "issue": "2",
       "pages": "68-75",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
-      ]
-    },
-    {
-      "pmid": "33123807",
-      "doi": "10.1007/s00421-020-04532-0",
-      "pmc": "PMC9762459",
-      "title": "Electromyographic amplitude versus torque relationships are different in young versus postmenopausal females and are related to muscle mass after controlling for bodyweight",
-      "authors": [
-        "Banks NF",
-        "Rogers EM",
-        "Jenkins NDM"
-      ],
-      "journal": "Eur J Appl Physiol",
-      "year": 2020,
-      "volume": "121",
-      "issue": "2",
-      "pages": "479-488",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
-      ]
-    },
-    {
-      "pmid": "33043836",
-      "doi": "10.1080/17461391.2020.1836262",
-      "pmc": "PMC9762464",
-      "title": "Increases in motor unit action potential amplitudes are related to muscle hypertrophy following eight weeks of high-intensity exercise training in females",
-      "authors": [
-        "Jenkins NDM",
-        "Rogers EM",
-        "Banks NF",
-        "Muddle TWD",
-        "Colquhoun RJ"
-      ],
-      "journal": "Eur J Sport Sci",
-      "year": 2020,
-      "volume": "21",
-      "issue": "10",
-      "pages": "1403-1413",
       "group": "article",
       "article_types": [
         "Journal Article"
@@ -1396,7 +1396,7 @@
       "pmid": "30267546",
       "doi": "10.1113/EP087145",
       "pmc": null,
-      "title": "Genetic variant in the β-adrenergic receptor (Arg16Gly) influences fat-free mass, muscle strength and motor unit behaviour in young men",
+      "title": "Genetic variant in the β",
       "authors": [
         "Jenkins NDM",
         "Colquhoun RJ",
@@ -1465,6 +1465,29 @@
       "volume": "6",
       "issue": "5",
       "pages": null,
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "30479636",
+      "doi": "10.1177/1742271X18780127",
+      "pmc": "PMC6243455",
+      "title": "Reliability and differences in quadriceps femoris muscle morphology using ultrasonography: The effects of body position and rest time",
+      "authors": [
+        "Tomko PM",
+        "Muddle TW",
+        "Magrini MA",
+        "Colquhoun RJ",
+        "Luera MJ",
+        "Jenkins ND"
+      ],
+      "journal": "Ultrasound",
+      "year": 2018,
+      "volume": "26",
+      "issue": "4",
+      "pages": "214-221",
       "group": "article",
       "article_types": [
         "Journal Article"
@@ -1563,29 +1586,6 @@
       "article_types": [
         "Journal Article",
         "Randomized Controlled Trial"
-      ]
-    },
-    {
-      "pmid": "30479636",
-      "doi": "10.1177/1742271X18780127",
-      "pmc": "PMC6243455",
-      "title": "Reliability and differences in quadriceps femoris muscle morphology using ultrasonography: The effects of body position and rest time",
-      "authors": [
-        "Tomko PM",
-        "Muddle TW",
-        "Magrini MA",
-        "Colquhoun RJ",
-        "Luera MJ",
-        "Jenkins ND"
-      ],
-      "journal": "Ultrasound",
-      "year": 2018,
-      "volume": "26",
-      "issue": "4",
-      "pages": "214-221",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
       ]
     },
     {
@@ -1715,6 +1715,56 @@
       ]
     },
     {
+      "pmid": "28006829",
+      "doi": "10.1055/s-0042-119398",
+      "pmc": null,
+      "title": "Influences of Interelectrode Distance and Innervation Zone on Electromyographic Signals",
+      "authors": [
+        "Smith CM",
+        "Housh TJ",
+        "Zuniga JM",
+        "Camic CL",
+        "Bergstrom HC",
+        "Smith DB",
+        "Herda T",
+        "Weir JP",
+        "Hill EC",
+        "Jenkins ND",
+        "Schmidt RJ",
+        "Johnson G"
+      ],
+      "journal": "Int J Sports Med",
+      "year": 2017,
+      "volume": "38",
+      "issue": "2",
+      "pages": "111-117",
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "25948290",
+      "doi": "10.1177/0733464815584669",
+      "pmc": null,
+      "title": "Isokinetic Dynamometry in Healthy Versus Sarcopenic and Malnourished Elderly: Beyond Simple Measurements of Muscle Strength",
+      "authors": [
+        "Cramer JT",
+        "Jenkins NDM",
+        "Mustad VA",
+        "Weir JP"
+      ],
+      "journal": "J Appl Gerontol",
+      "year": 2017,
+      "volume": "36",
+      "issue": "6",
+      "pages": "709-732",
+      "group": "article",
+      "article_types": [
+        "Journal Article"
+      ]
+    },
+    {
       "pmid": "27718510",
       "doi": "10.1002/mus.25432",
       "pmc": null,
@@ -1832,6 +1882,33 @@
       "group": "commentary",
       "article_types": [
         "Letter"
+      ]
+    },
+    {
+      "pmid": "26705244",
+      "doi": "10.1007/s00421-015-3315-5",
+      "pmc": null,
+      "title": "Basic reporting and interpretation of surface EMG amplitude and mean power frequency: a reply to Vitgotsky, Ogborn, and Phillips",
+      "authors": [
+        "Jenkins ND",
+        "Housh TJ",
+        "Bergstrom HC",
+        "Cochrane KC",
+        "Hill EC",
+        "Smith CM",
+        "Johnson GO",
+        "Schmidt RJ",
+        "Cramer JT"
+      ],
+      "journal": "Eur J Appl Physiol",
+      "year": 2016,
+      "volume": "116",
+      "issue": "3",
+      "pages": "659-61",
+      "group": "commentary",
+      "article_types": [
+        "Journal Article",
+        "Comment"
       ]
     },
     {
@@ -1994,32 +2071,32 @@
       ]
     },
     {
-      "pmid": "28006829",
-      "doi": "10.1055/s-0042-119398",
-      "pmc": null,
-      "title": "Influences of Interelectrode Distance and Innervation Zone on Electromyographic Signals",
+      "pmid": "27282457",
+      "doi": null,
+      "pmc": "PMC5114356",
+      "title": "Four weeks of high- versus low-load resistance training to failure on the rate of torque development, electromechanical delay, and contractile twitch properties",
       "authors": [
-        "Smith CM",
-        "Housh TJ",
-        "Zuniga JM",
-        "Camic CL",
-        "Bergstrom HC",
-        "Smith DB",
-        "Herda T",
-        "Weir JP",
-        "Hill EC",
         "Jenkins ND",
+        "Housh TJ",
+        "Buckner SL",
+        "Bergstrom HC",
+        "Smith CM",
+        "Cochrane KC",
+        "Hill EC",
+        "Miramonti AA",
         "Schmidt RJ",
-        "Johnson G"
+        "Johnson GO",
+        "Cramer JT"
       ],
-      "journal": "Int J Sports Med",
+      "journal": "J Musculoskelet Neuronal Interact",
       "year": 2016,
-      "volume": "38",
+      "volume": "16",
       "issue": "2",
-      "pages": "111-117",
+      "pages": "135-44",
       "group": "article",
       "article_types": [
-        "Journal Article"
+        "Journal Article",
+        "Randomized Controlled Trial"
       ]
     },
     {
@@ -2105,35 +2182,6 @@
       ]
     },
     {
-      "pmid": "27282457",
-      "doi": null,
-      "pmc": "PMC5114356",
-      "title": "Four weeks of high- versus low-load resistance training to failure on the rate of torque development, electromechanical delay, and contractile twitch properties",
-      "authors": [
-        "Jenkins ND",
-        "Housh TJ",
-        "Buckner SL",
-        "Bergstrom HC",
-        "Smith CM",
-        "Cochrane KC",
-        "Hill EC",
-        "Miramonti AA",
-        "Schmidt RJ",
-        "Johnson GO",
-        "Cramer JT"
-      ],
-      "journal": "J Musculoskelet Neuronal Interact",
-      "year": 2016,
-      "volume": "16",
-      "issue": "2",
-      "pages": "135-44",
-      "group": "article",
-      "article_types": [
-        "Journal Article",
-        "Randomized Controlled Trial"
-      ]
-    },
-    {
       "pmid": "25647653",
       "doi": "10.1519/JSC.0000000000000869",
       "pmc": null,
@@ -2158,33 +2206,6 @@
       "group": "article",
       "article_types": [
         "Journal Article"
-      ]
-    },
-    {
-      "pmid": "26705244",
-      "doi": "10.1007/s00421-015-3315-5",
-      "pmc": null,
-      "title": "Basic reporting and interpretation of surface EMG amplitude and mean power frequency: a reply to Vitgotsky, Ogborn, and Phillips",
-      "authors": [
-        "Jenkins ND",
-        "Housh TJ",
-        "Bergstrom HC",
-        "Cochrane KC",
-        "Hill EC",
-        "Smith CM",
-        "Johnson GO",
-        "Schmidt RJ",
-        "Cramer JT"
-      ],
-      "journal": "Eur J Appl Physiol",
-      "year": 2015,
-      "volume": "116",
-      "issue": "3",
-      "pages": "659-61",
-      "group": "commentary",
-      "article_types": [
-        "Journal Article",
-        "Comment"
       ]
     },
     {
@@ -2318,27 +2339,6 @@
       "volume": "115",
       "issue": "10",
       "pages": "2231-41",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
-      ]
-    },
-    {
-      "pmid": "25948290",
-      "doi": "10.1177/0733464815584669",
-      "pmc": null,
-      "title": "Isokinetic Dynamometry in Healthy Versus Sarcopenic and Malnourished Elderly: Beyond Simple Measurements of Muscle Strength",
-      "authors": [
-        "Cramer JT",
-        "Jenkins NDM",
-        "Mustad VA",
-        "Weir JP"
-      ],
-      "journal": "J Appl Gerontol",
-      "year": 2015,
-      "volume": "36",
-      "issue": "6",
-      "pages": "709-732",
       "group": "article",
       "article_types": [
         "Journal Article"
@@ -2526,6 +2526,27 @@
       ]
     },
     {
+      "pmid": "24299239",
+      "doi": "10.1111/cpf.12113",
+      "pmc": null,
+      "title": "Comparing the reliability of voluntary and evoked muscle actions",
+      "authors": [
+        "Jenkins ND",
+        "Palmer TB",
+        "Cramer JT"
+      ],
+      "journal": "Clin Physiol Funct Imaging",
+      "year": 2014,
+      "volume": "34",
+      "issue": "6",
+      "pages": "434-41",
+      "group": "article",
+      "article_types": [
+        "Comparative Study",
+        "Journal Article"
+      ]
+    },
+    {
       "pmid": "24796987",
       "doi": "10.1519/JSC.0000000000000513",
       "pmc": null,
@@ -2660,6 +2681,29 @@
       ]
     },
     {
+      "pmid": "23558664",
+      "doi": "10.1002/mus.23861",
+      "pmc": null,
+      "title": "The relationship between passive stiffness and muscle power output: influence of muscle cross-sectional area normalization",
+      "authors": [
+        "Palmer TB",
+        "Jenkins ND",
+        "Thompson BJ",
+        "Smith DB",
+        "Cramer JT"
+      ],
+      "journal": "Muscle Nerve",
+      "year": 2014,
+      "volume": "49",
+      "issue": "1",
+      "pages": "69-75",
+      "group": "article",
+      "article_types": [
+        "Comparative Study",
+        "Journal Article"
+      ]
+    },
+    {
       "pmid": "24021781",
       "doi": "10.1088/0967-3334/34/10/1253",
       "pmc": null,
@@ -2687,23 +2731,30 @@
       ]
     },
     {
-      "pmid": "24299239",
-      "doi": "10.1111/cpf.12113",
+      "pmid": "23150930",
+      "doi": "10.1080/02640414.2012.742958",
       "pmc": null,
-      "title": "Comparing the reliability of voluntary and evoked muscle actions",
+      "title": "Functional hamstrings: quadriceps ratios in elite women's soccer players",
       "authors": [
         "Jenkins ND",
-        "Palmer TB",
+        "Hawkey MJ",
+        "Costa PB",
+        "Fiddler RE",
+        "Thompson BJ",
+        "Ryan ED",
+        "Smith D",
+        "Sobolewski EJ",
+        "Conchola EC",
+        "Akehi K",
         "Cramer JT"
       ],
-      "journal": "Clin Physiol Funct Imaging",
+      "journal": "J Sports Sci",
       "year": 2013,
-      "volume": "34",
+      "volume": "31",
       "issue": "6",
-      "pages": "434-41",
+      "pages": "612-7",
       "group": "article",
       "article_types": [
-        "Comparative Study",
         "Journal Article"
       ]
     },
@@ -2734,26 +2785,25 @@
       ]
     },
     {
-      "pmid": "23558664",
-      "doi": "10.1002/mus.23861",
+      "pmid": "23256778",
+      "doi": "10.1080/02640414.2012.753159",
       "pmc": null,
-      "title": "The relationship between passive stiffness and muscle power output: influence of muscle cross-sectional area normalization",
+      "title": "Reliability of manual versus automated techniques for assessing passive stiffness of the posterior muscles of the hip and thigh",
       "authors": [
         "Palmer TB",
         "Jenkins ND",
-        "Thompson BJ",
-        "Smith DB",
         "Cramer JT"
       ],
-      "journal": "Muscle Nerve",
+      "journal": "J Sports Sci",
       "year": 2013,
-      "volume": "49",
-      "issue": "1",
-      "pages": "69-75",
+      "volume": "31",
+      "issue": "8",
+      "pages": "867-77",
       "group": "article",
       "article_types": [
         "Comparative Study",
-        "Journal Article"
+        "Journal Article",
+        "Validation Study"
       ]
     },
     {
@@ -2780,56 +2830,6 @@
       "group": "article",
       "article_types": [
         "Journal Article"
-      ]
-    },
-    {
-      "pmid": "23150930",
-      "doi": "10.1080/02640414.2012.742958",
-      "pmc": null,
-      "title": "Functional hamstrings: quadriceps ratios in elite women's soccer players",
-      "authors": [
-        "Jenkins ND",
-        "Hawkey MJ",
-        "Costa PB",
-        "Fiddler RE",
-        "Thompson BJ",
-        "Ryan ED",
-        "Smith D",
-        "Sobolewski EJ",
-        "Conchola EC",
-        "Akehi K",
-        "Cramer JT"
-      ],
-      "journal": "J Sports Sci",
-      "year": 2012,
-      "volume": "31",
-      "issue": "6",
-      "pages": "612-7",
-      "group": "article",
-      "article_types": [
-        "Journal Article"
-      ]
-    },
-    {
-      "pmid": "23256778",
-      "doi": "10.1080/02640414.2012.753159",
-      "pmc": null,
-      "title": "Reliability of manual versus automated techniques for assessing passive stiffness of the posterior muscles of the hip and thigh",
-      "authors": [
-        "Palmer TB",
-        "Jenkins ND",
-        "Cramer JT"
-      ],
-      "journal": "J Sports Sci",
-      "year": 2012,
-      "volume": "31",
-      "issue": "8",
-      "pages": "867-77",
-      "group": "article",
-      "article_types": [
-        "Comparative Study",
-        "Journal Article",
-        "Validation Study"
       ]
     }
   ]
