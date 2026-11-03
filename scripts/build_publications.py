@@ -316,7 +316,7 @@ img{{max-width:100%;height:auto;display:block}}
 <main>
   <div class="pubhead">
     <h1>Publications</h1>
-    <p>{count} indexed records from the lab and from Nathaniel D. M. Jenkins, grouped by type and listed newest first.</p>
+    <p>{count} records from the lab and from Nathaniel D. M. Jenkins, grouped by type and listed newest first.</p>
     <p class="meta">
       Source PubMed, query <code>{query}</code><br>
       Last updated {generated}

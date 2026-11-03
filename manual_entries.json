@@ -1,6 +1,38 @@
 {
-  "source": "My Bibliography (not indexed in PubMed)",
-  "note": "PLACEHOLDER. Regenerate with: python3 scripts/import_bibliography.py medline.txt",
-  "count": 0,
-  "records": []
+  "source": "Entered by hand: in press or not yet indexed in PubMed",
+  "note": "Records here are merged into publications.html by build_publications.py and are dropped automatically once PubMed indexes the same DOI or title. Bulk imports from a My Bibliography MEDLINE export go through scripts/import_bibliography.py.",
+  "count": 1,
+  "records": [
+    {
+      "pmid": null,
+      "doi": "10.1038/s41514-026-00552-w",
+      "pmc": null,
+      "title": "Seasonal variation in resting heart rate and heart rate variability is attenuated with advancing age",
+      "authors": [
+        "Jennings W",
+        "Jenkins NDM",
+        "von Hippel W",
+        "Fielding F",
+        "Chapman CJ",
+        "Curran D",
+        "Parola LR",
+        "Cohen JG",
+        "Cheung CP",
+        "Holmes KE",
+        "Leota J",
+        "Beattie UK",
+        "Jasinski SR",
+        "Elkin-Frankston S",
+        "Wolf ST",
+        "Grosicki GJ"
+      ],
+      "journal": "npj Aging",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "group": "article",
+      "article_types": ["Journal Article"]
+    }
+  ]
 }
