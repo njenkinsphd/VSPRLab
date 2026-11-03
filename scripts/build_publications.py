@@ -217,14 +217,14 @@ TEMPLATE = """<!DOCTYPE html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800;900&family=Red+Hat+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{{
   --paper:#F8F8F8; --paper-deep:#EFEFF0; --ink:#1D1C1F; --slate:#6B6A70;
   --crimson:#B50811; --crimson-deep:#7A0309; --gold:#BF9B54;
   --blue:#2A5D8F;
-  --display:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --display:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --body:"Red Hat Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   --gutter:clamp(20px,5vw,84px);
   --rule:1px solid rgba(29,28,31,.13);
@@ -232,7 +232,7 @@ TEMPLATE = """<!DOCTYPE html>
 *,*::before,*::after{{box-sizing:border-box}}
 html{{-webkit-text-size-adjust:100%;scroll-behavior:smooth}}
 body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
-  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}}
+  font-size:16px;line-height:1.66;-webkit-font-smoothing:antialiased}}
 img{{max-width:100%;height:auto;display:block}}
 
 .masthead{{border-bottom:var(--rule);padding:14px var(--gutter);display:flex;
