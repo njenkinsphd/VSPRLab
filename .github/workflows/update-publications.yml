@@ -42,14 +42,17 @@ jobs:
       - name: Rebuild publications.html
         run: python3 scripts/build_publications.py
 
+      - name: Refresh sitemap
+        run: python3 scripts/build_sitemap.py
+
       - name: Commit if anything changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet publications.json publications.html; then
+          if git diff --quiet publications.json publications.html sitemap.xml; then
             echo "No change."
           else
-            git add publications.json publications.html
+            git add publications.json publications.html sitemap.xml
             git commit -m "Update publications from PubMed"
             git push
           fi
