@@ -91,6 +91,21 @@ def _text(node, path):
     return el.text.strip() if el is not None and el.text else None
 
 
+def _rich_text(node, path):
+    """Like _text, but keeps text that follows an inline tag.
+
+    PubMed wraps parts of a title in <sub>, <sup>, <i> and <b>. Element.text
+    stops at the first child, so reading a title that way silently truncates it
+    at the markup: "... in the <sub>2</sub>-adrenergic receptor" came back as
+    "... in the". itertext walks the children and their tails instead.
+    """
+    el = node.find(path)
+    if el is None:
+        return None
+    joined = "".join(el.itertext()).strip()
+    return joined or None
+
+
 def _initials(author):
     ini = _text(author, "Initials")
     if ini:
@@ -108,7 +123,7 @@ def parse_article(art):
     if article is None:
         return None
 
-    title = (_text(article, "ArticleTitle") or "").rstrip(".")
+    title = (_rich_text(article, "ArticleTitle") or "").rstrip(".")
 
     authors = []
     for a in article.findall("./AuthorList/Author"):
