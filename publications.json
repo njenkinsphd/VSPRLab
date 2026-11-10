@@ -2,7 +2,7 @@
   "source": "PubMed",
   "query": "Jenkins NDM[Author]",
   "generated": "2026-11-01",
-  "count": 113,
+  "count": 114,
   "records": [
     {
       "pmid": "42932972",
@@ -55,6 +55,32 @@
       "group": "article",
       "article_types": [
         "Journal Article"
+      ]
+    },
+    {
+      "pmid": "42990600",
+      "doi": "10.64898/2026.10.25.26366435",
+      "pmc": "PMC13734060",
+      "title": "Diet Quality Scores are Associated with Sleep Timing and Regularity in Emerging Adults",
+      "authors": [
+        "Sanchez SO",
+        "Culver MN",
+        "Linder BA",
+        "Hutchison ZJ",
+        "Honaker SM",
+        "Jenkins NDM",
+        "Evans EM",
+        "Robinson AT"
+      ],
+      "journal": "medRxiv",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "group": "preprint",
+      "article_types": [
+        "Journal Article",
+        "Preprint"
       ]
     },
     {
